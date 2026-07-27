@@ -1,0 +1,130 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Lead {
+  id           String   @id @default(cuid())
+  name         String
+  phone        String
+  email        String?
+  neighborhood String?
+  serviceType  String
+  projectType  String?
+  message      String
+  status       String   @default("NOVO")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@map("leads")
+}
+
+model ServiceCategory {
+  id          String    @id @default(cuid())
+  name        String
+  slug        String    @unique
+  description String
+  order       Int       @default(0)
+  services    Service[]
+
+  @@map("service_categories")
+}
+
+model Service {
+  id                  String          @id @default(cuid())
+  title               String
+  slug                String          @unique
+  shortDescription    String
+  fullDescription     String
+  categoryId          String
+  category            ServiceCategory @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  benefits            String          // JSON array stored as string
+  differentials       String          // Text or JSON array
+  targetNeighborhoods String          // Comma separated or JSON array
+  seoTitle            String?
+  seoDescription      String?
+  imageUrl            String?
+  icon                String?
+  active              Boolean         @default(true)
+  order               Int             @default(0)
+  createdAt           DateTime        @default(now())
+  updatedAt           DateTime        @updatedAt
+
+  @@map("services")
+}
+
+model PortfolioItem {
+  id              String   @id @default(cuid())
+  title           String
+  slug            String   @unique
+  serviceCategory String
+  neighborhood    String
+  description     String
+  beforeImageUrl  String?
+  afterImageUrl   String
+  executionTime   String?
+  featured        Boolean  @default(false)
+  createdAt       DateTime @default(now())
+
+  @@map("portfolio_items")
+}
+
+model Testimonial {
+  id              String   @id @default(cuid())
+  clientName      String
+  neighborhood    String
+  serviceProvided String
+  rating          Int      @default(5)
+  comment         String
+  avatarUrl       String?
+  verified        Boolean  @default(true)
+  source          String   @default("Google")
+  createdAt       DateTime @default(now())
+
+  @@map("testimonials")
+}
+
+model BlogPost {
+  id            String   @id @default(cuid())
+  title         String
+  slug          String   @unique
+  excerpt       String
+  content       String
+  category      String
+  readTime      String?
+  coverImageUrl String?
+  published     Boolean  @default(true)
+  publishedAt   DateTime @default(now())
+
+  @@map("blog_posts")
+}
+
+model CompanyInfo {
+  id                   String   @id @default("default")
+  companyName          String
+  tradeName            String
+  cnpj                 String?
+  crea                 String?
+  phone                String
+  whatsapp             String
+  email                String
+  address              String
+  street               String
+  number               String
+  neighborhood         String
+  city                 String
+  state                String
+  cep                  String
+  instagram            String
+  googleMapsEmbed      String
+  paymentMethods       String
+  coverageNeighborhoods String   // JSON array of strings
+  workingHours         String
+  updatedAt            DateTime @updatedAt
+
+  @@map("company_info")
+}

@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --color-azul: #004488;
+  --color-azul-dark: #003366;
+  --color-azul-light: #0066cc;
+  --color-laranja: #f97316;
+  --color-laranja-dark: #ea6a0a;
+  --font-sans: "Inter", sans-serif;
+  --font-head: "Barlow", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans text-gray-800 antialiased;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-head);
+  }
+}
+
+@layer utilities {
+  .text-azul { color: var(--color-azul); }
+  .text-laranja { color: var(--color-laranja); }
+  .bg-azul { background-color: var(--color-azul); }
+  .bg-laranja { background-color: var(--color-laranja); }
+  .border-azul { border-color: var(--color-azul); }
+  .border-laranja { border-color: var(--color-laranja); }
+  .hero-gradient {
+    background: linear-gradient(135deg, #004488 0%, #003366 60%, #002244 100%);
+  }
+  .section-tag {
+    @apply inline-block px-3 py-1 text-sm font-semibold tracking-wider uppercase rounded-full bg-orange-100 text-orange-600 mb-4;
+  }
+  .section-tag--light {
+    @apply bg-white/10 text-orange-300;
+  }
+}
