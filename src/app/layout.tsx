@@ -1,16 +1,16 @@
 import "~/styles/globals.css";
 import type { Metadata } from "next";
-import { Inter, Barlow } from "next/font/google";
+import { Inter, Outfit } from "next/font/google";
 import { TRPCReactProvider } from "~/trpc/react";
 import { Navbar } from "~/components/Navbar";
 import { Footer } from "~/components/Footer";
 import { WhatsAppFloat } from "~/components/WhatsAppFloat";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const barlow = Barlow({
+const outfit = Outfit({
   subsets: ["latin"],
-  weight: ["400", "600", "700", "800", "900"],
-  variable: "--font-barlow",
+  weight: ["400", "500", "600", "700", "800", "900"],
+  variable: "--font-outfit",
 });
 
 export const metadata: Metadata = {
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-BR" className={`${inter.variable} ${barlow.variable}`}>
+    <html lang="pt-BR" className={`${inter.variable} ${outfit.variable}`}>
       <body className="font-sans">
         <TRPCReactProvider>
           <Navbar />

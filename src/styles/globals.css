@@ -6,8 +6,8 @@
   --color-azul-light: #0066cc;
   --color-laranja: #f97316;
   --color-laranja-dark: #ea6a0a;
-  --font-sans: "Inter", sans-serif;
-  --font-head: "Barlow", sans-serif;
+  --font-sans: var(--font-inter), "Inter", sans-serif;
+  --font-head: var(--font-outfit), "Outfit", sans-serif;
 }
 
 @layer base {
@@ -15,10 +15,11 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply font-sans text-gray-800 antialiased;
+    @apply font-sans text-gray-800 antialiased bg-white;
   }
-  h1, h2, h3, h4 {
+  h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-head);
+    letter-spacing: -0.02em;
   }
 }
 
@@ -29,13 +30,27 @@
   .bg-laranja { background-color: var(--color-laranja); }
   .border-azul { border-color: var(--color-azul); }
   .border-laranja { border-color: var(--color-laranja); }
+  
   .hero-gradient {
-    background: linear-gradient(135deg, #004488 0%, #003366 60%, #002244 100%);
+    background: linear-gradient(135deg, #004488 0%, #003366 50%, #001e3d 100%);
   }
-  .section-tag {
-    @apply inline-block px-3 py-1 text-sm font-semibold tracking-wider uppercase rounded-full bg-orange-100 text-orange-600 mb-4;
+
+  /* Enhanced Interactive Hover Effects */
+  .card-hover {
+    @apply transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-xl hover:border-orange-300;
   }
-  .section-tag--light {
-    @apply bg-white/10 text-orange-300;
+
+  .btn-glow {
+    @apply relative overflow-hidden transition-all duration-300 active:scale-95 hover:shadow-[0_8px_25px_rgba(249,115,22,0.4)];
+  }
+
+  .btn-glow-blue {
+    @apply relative overflow-hidden transition-all duration-300 active:scale-95 hover:shadow-[0_8px_25px_rgba(0,68,136,0.4)];
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(229, 231, 235, 0.8);
   }
 }
