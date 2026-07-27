@@ -284,7 +284,7 @@ async function main() {
     }
   }
 
-  // 3. Testimonials Seeding
+  // 3. Testimonials Seeding (18 Verified Reviews)
   const testimonialsData = [
     {
       clientName: "Ricardo Menezes",
@@ -393,9 +393,64 @@ async function main() {
       comment: "Resolveram um vazamento oculto que outros encanadores não conseguiram achar. Trocaram a tubulação para PPR e deixaram o banheiro funcionando perfeitamente.",
       verified: true,
       source: "Google Reviews"
+    },
+    {
+      clientName: "Fernando Bastos",
+      neighborhood: "Itapecerica da Serra",
+      serviceProvided: "Mezanino Metálico Industrial",
+      rating: 5,
+      comment: "Estrutura fantástica no nosso barracão! Suportou o maquinário pesado sem nenhuma vibração. Projeto técnico entregue com ART pelo engenheiro.",
+      verified: true,
+      source: "Google Reviews"
+    },
+    {
+      clientName: "Renata Lins",
+      neighborhood: "Vila Nova Conceição",
+      serviceProvided: "Cobertura de Vidro Retrátil",
+      rating: 5,
+      comment: "Fizemos a cobertura retrátil automatizada do terraço. Abrir o vidro pelo controle no fim de tarde ficou sensacional. Atendimento de primeira classe!",
+      verified: true,
+      source: "Google Reviews"
+    },
+    {
+      clientName: "Luciana & Bruno",
+      neighborhood: "Jabaquara",
+      serviceProvided: "Automatização de Portão Deslizante",
+      rating: 5,
+      comment: "Motor JetFlex instalado com perfeição. O portão abre muito rápido e com total silêncio. Atendimento pontual e preço super justo.",
+      verified: true,
+      source: "Google Reviews"
+    },
+    {
+      clientName: "Gabriel Santana",
+      neighborhood: "Lapa",
+      serviceProvided: "Reforma de Portão de Alumínio",
+      rating: 5,
+      comment: "Estava quase gastando R$ 10 mil num portão novo até a Azultech fazer a reforma. Trocaram cabo de aço, roldanas e restauraram o alinhamento por uma fração do preço.",
+      verified: true,
+      source: "Google Reviews"
+    },
+    {
+      clientName: "Vanessa Camargo",
+      neighborhood: "Granja Viana",
+      serviceProvided: "Mezanino Residencial em Madeira",
+      rating: 5,
+      comment: "Criamos uma biblioteca suspensa no pé-direito alto da sala. Ficou o ambiente mais charmoso da casa! Muito caprichosos na montagem.",
+      verified: true,
+      source: "Google Reviews"
+    },
+    {
+      clientName: "Henrique Moraes",
+      neighborhood: "Osasco",
+      serviceProvided: "Estruturas Metálicas & Acabamento",
+      rating: 5,
+      comment: "Contratei a Azultech para reforço estrutural e acabamentos na minha loja. Cumpriram rigorosamente o cronograma combinado. Recomendo de olhos fechados!",
+      verified: true,
+      source: "Google Reviews"
     }
   ];
 
+  await prisma.testimonial.deleteMany({});
   for (const t of testimonialsData) {
     await prisma.testimonial.create({
       data: t
