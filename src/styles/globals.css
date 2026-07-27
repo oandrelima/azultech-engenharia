@@ -7,7 +7,7 @@
   --color-laranja: #f97316;
   --color-laranja-dark: #ea6a0a;
   --font-sans: var(--font-inter), "Inter", sans-serif;
-  --font-head: var(--font-outfit), "Outfit", sans-serif;
+  --font-head: var(--font-jakarta), "Plus Jakarta Sans", sans-serif;
 }
 
 @layer base {
@@ -19,7 +19,7 @@
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-head);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.025em;
   }
 }
 
