@@ -4,6 +4,7 @@ import { api, HydrateClient } from "~/trpc/server";
 import { LeadForm } from "~/components/LeadForm";
 import { ScrollReveal } from "~/components/ScrollReveal";
 import { TestimonialCarousel } from "~/components/TestimonialCarousel";
+import { FALLBACK_TESTIMONIALS } from "~/server/api/routers/testimonials";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -28,10 +29,12 @@ export default async function HomePage() {
   void api.services.getAll.prefetch({});
   void api.testimonials.getAll.prefetch();
 
-  const [services, testimonials] = await Promise.all([
-    api.services.getAll({}),
-    api.testimonials.getAll(),
+  const [services, testimonialsData] = await Promise.all([
+    api.services.getAll({}).catch(() => []),
+    api.testimonials.getAll().catch(() => FALLBACK_TESTIMONIALS),
   ]);
+
+  const testimonials = (testimonialsData && testimonialsData.length > 0) ? testimonialsData : FALLBACK_TESTIMONIALS;
 
   return (
     <HydrateClient>
@@ -215,7 +218,7 @@ export default async function HomePage() {
       </section>
 
       {/* ===== DEPOIMENTOS CAROUSEL ===== */}
-      <section className="py-20 bg-gray-50 overflow-hidden">
+      <section className="py-20 bg-gray-50 overflow-hidden" id="depoimentos">
         <div className="container mx-auto px-4">
           <ScrollReveal direction="up" className="text-center mb-10">
             <h2 className="font-head text-3xl sm:text-4xl font-black text-gray-900 mb-3">
