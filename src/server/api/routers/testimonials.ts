@@ -199,8 +199,18 @@ export const testimonialsRouter = createTRPCRouter({
         where: { verified: true },
         orderBy: { createdAt: "desc" },
       });
-      if (items && items.length > 0) return items;
-      return FALLBACK_TESTIMONIALS;
+
+      // IDs presentes no fallback estático (os 18 reviews base)
+      const fallbackIds = new Set(FALLBACK_TESTIMONIALS.map((t) => t.id));
+
+      // Novos reviews enviados pelo site que não estão no fallback
+      const websiteReviews = items.filter((t) => !fallbackIds.has(t.id));
+
+      // Retorna novos reviews do site primeiro, depois o fallback completo
+      return [
+        ...websiteReviews,
+        ...FALLBACK_TESTIMONIALS,
+      ] as typeof FALLBACK_TESTIMONIALS;
     } catch {
       return FALLBACK_TESTIMONIALS;
     }
