@@ -32,7 +32,7 @@ export async function sendLeadNotificationEmail(leadData: LeadData): Promise<boo
       subject: `Novo Orçamento — ${leadData.name} (${leadData.serviceType})`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px;">
-          <h2 style="color: #004488; border-bottom: 2px solid #004488; padding-bottom: 8px;">Novo Pedido de Orçamento — Azultech</h2>
+          <h2 style="color: #0c3561; border-bottom: 2px solid #0c3561; padding-bottom: 8px;">Novo Pedido de Orçamento — Azultech</h2>
           <p><strong>Nome:</strong> ${leadData.name}</p>
           <p><strong>Telefone/WhatsApp:</strong> <a href="https://wa.me/55${leadData.phone.replace(/\D/g, "")}">${leadData.phone}</a></p>
           <p><strong>E-mail:</strong> ${leadData.email ?? "Não informado"}</p>
@@ -41,7 +41,7 @@ export async function sendLeadNotificationEmail(leadData: LeadData): Promise<boo
           <p><strong>Tipo de Obra:</strong> ${leadData.projectType ?? "Residencial"}</p>
           <hr style="border: 0; border-top: 1px solid #eee;" />
           <p><strong>Mensagem do cliente:</strong></p>
-          <blockquote style="background: #f9f9f9; padding: 12px; border-left: 4px solid #004488; margin: 0;">
+          <blockquote style="background: #f9f9f9; padding: 12px; border-left: 4px solid #0c3561; margin: 0;">
             ${leadData.message}
           </blockquote>
           <hr style="border: 0; border-top: 1px solid #eee; margin-top: 20px;" />

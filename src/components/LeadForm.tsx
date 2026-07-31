@@ -40,7 +40,7 @@ export function LeadForm({ defaultService }: LeadFormProps) {
         <div className="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-2xl">
           ✓
         </div>
-        <h3 className="text-2xl font-bold text-[#004488] mb-2">Recebemos sua solicitação!</h3>
+        <h3 className="text-2xl font-bold text-[#0c3561] mb-2">Recebemos sua solicitação!</h3>
         <p className="text-gray-600 mb-6 text-sm">Nossa equipe entrará em contato em até 24 horas. Ou se preferir, fale agora pelo WhatsApp.</p>
         <a
           href="https://wa.me/5511939217592"
@@ -67,7 +67,7 @@ export function LeadForm({ defaultService }: LeadFormProps) {
           <input
             type="text" required placeholder="Seu nome"
             value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })}
-            className="w-full px-3.5 py-2.5 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#004488] focus:border-transparent outline-none transition-all"
+            className="w-full px-3.5 py-2.5 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0c3561] focus:border-transparent outline-none transition-all"
           />
         </div>
         <div>
@@ -77,7 +77,7 @@ export function LeadForm({ defaultService }: LeadFormProps) {
           <input
             type="tel" required placeholder="(11) 99999-9999"
             value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })}
-            className="w-full px-3.5 py-2.5 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#004488] focus:border-transparent outline-none transition-all"
+            className="w-full px-3.5 py-2.5 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0c3561] focus:border-transparent outline-none transition-all"
           />
         </div>
         <div>
@@ -85,7 +85,7 @@ export function LeadForm({ defaultService }: LeadFormProps) {
           <input
             type="email" placeholder="seu@email.com"
             value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })}
-            className="w-full px-3.5 py-2.5 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#004488] focus:border-transparent outline-none transition-all"
+            className="w-full px-3.5 py-2.5 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0c3561] focus:border-transparent outline-none transition-all"
           />
         </div>
         <div>
@@ -93,7 +93,7 @@ export function LeadForm({ defaultService }: LeadFormProps) {
           <input
             type="text" placeholder="Ex: Morumbi, Campo Limpo..."
             value={form.neighborhood} onChange={(e) => setForm({ ...form, neighborhood: e.target.value })}
-            className="w-full px-3.5 py-2.5 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#004488] focus:border-transparent outline-none transition-all"
+            className="w-full px-3.5 py-2.5 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0c3561] focus:border-transparent outline-none transition-all"
           />
         </div>
       </div>
@@ -105,7 +105,7 @@ export function LeadForm({ defaultService }: LeadFormProps) {
           </label>
           <select
             required value={form.serviceType} onChange={(e) => setForm({ ...form, serviceType: e.target.value })}
-            className="w-full px-3.5 py-2.5 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#004488] focus:border-transparent outline-none transition-all bg-white"
+            className="w-full px-3.5 py-2.5 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0c3561] focus:border-transparent outline-none transition-all bg-white"
           >
             <option value="">Selecione um serviço</option>
             {SERVICE_TYPES.map((s) => <option key={s} value={s}>{s}</option>)}
@@ -115,7 +115,7 @@ export function LeadForm({ defaultService }: LeadFormProps) {
           <label className="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1">Tipo de imóvel</label>
           <select
             value={form.projectType} onChange={(e) => setForm({ ...form, projectType: e.target.value })}
-            className="w-full px-3.5 py-2.5 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#004488] focus:border-transparent outline-none transition-all bg-white"
+            className="w-full px-3.5 py-2.5 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0c3561] focus:border-transparent outline-none transition-all bg-white"
           >
             <option value="Residencial">Residencial</option>
             <option value="Comercial">Comercial</option>
@@ -131,7 +131,7 @@ export function LeadForm({ defaultService }: LeadFormProps) {
         <textarea
           required rows={3} placeholder="Descreva o que você precisa..."
           value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })}
-          className="w-full px-3.5 py-2.5 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#004488] focus:border-transparent outline-none transition-all resize-none"
+          className="w-full px-3.5 py-2.5 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0c3561] focus:border-transparent outline-none transition-all resize-none"
         />
       </div>
 

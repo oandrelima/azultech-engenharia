@@ -56,7 +56,7 @@ export function TestimonialCarousel({ testimonials: initialTestimonials }: Testi
         onClick={() => scroll("left")}
         disabled={!canScrollLeft}
         aria-label="Depoimento Anterior"
-        className="absolute -left-2 sm:left-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white border border-gray-200 text-[#004488] hover:bg-[#004488] hover:text-white hover:border-[#004488] disabled:opacity-0 disabled:pointer-events-none flex items-center justify-center transition-all duration-300 shadow-xl active:scale-95 cursor-pointer"
+        className="absolute -left-2 sm:left-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white border border-gray-200 text-[#0c3561] hover:bg-[#0c3561] hover:text-white hover:border-[#0c3561] disabled:opacity-0 disabled:pointer-events-none flex items-center justify-center transition-all duration-300 shadow-xl active:scale-95 cursor-pointer"
       >
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M15 19l-7-7 7-7" />
@@ -126,7 +126,7 @@ export function TestimonialCarousel({ testimonials: initialTestimonials }: Testi
 
                 {/* Client Profile Info */}
                 <div className="flex items-center gap-3.5 pt-4 border-t border-gray-100 mt-auto">
-                  <div className="w-11 h-11 rounded-full bg-[#004488] text-white flex items-center justify-center font-head font-bold text-sm shadow-inner flex-shrink-0 group-hover:bg-orange-500 transition-colors">
+                  <div className="w-11 h-11 rounded-full bg-[#0c3561] text-white flex items-center justify-center font-head font-bold text-sm shadow-inner flex-shrink-0 group-hover:bg-orange-500 transition-colors">
                     {initials}
                   </div>
                   <div>

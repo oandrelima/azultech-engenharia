@@ -50,12 +50,12 @@ export default async function ServicePage({ params }: Props) {
   return (
     <>
       {/* Compact Hero with low opacity background image */}
-      <section className="relative bg-[#004488] py-10 lg:py-12 overflow-hidden">
+      <section className="relative bg-[#0c3561] py-10 lg:py-12 overflow-hidden">
         <div
           className="absolute inset-0 opacity-20 bg-cover bg-center"
           style={{ backgroundImage: `url('${heroBgImage}')` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#003366]/90 via-[#004488]/80 to-[#002244]/90" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#091f3a]/90 via-[#0c3561]/80 to-[#060f1e]/90" />
 
         <div className="container mx-auto px-4 relative z-10">
           <nav className="text-xs text-blue-200 mb-3 flex items-center gap-2 flex-wrap">
@@ -146,7 +146,7 @@ export default async function ServicePage({ params }: Props) {
                       {service.targetNeighborhoods.map((neighborhood) => (
                         <span
                           key={neighborhood}
-                          className="bg-blue-50 border border-blue-100 hover:border-orange-300 hover:text-orange-600 text-[#004488] text-xs font-semibold px-3 py-1.5 rounded-lg transition-colors cursor-default"
+                          className="bg-blue-50 border border-blue-100 hover:border-orange-300 hover:text-orange-600 text-[#0c3561] text-xs font-semibold px-3 py-1.5 rounded-lg transition-colors cursor-default"
                         >
                           {neighborhood}
                         </span>
@@ -185,7 +185,7 @@ export default async function ServicePage({ params }: Props) {
             {/* Right Column: Sticky Budget Form Sidebar */}
             <div className="lg:col-span-1 sticky top-24">
               <ScrollReveal direction="left" delay={100}>
-                <div className="bg-[#004488] rounded-2xl p-6 shadow-xl text-white mb-6">
+                <div className="bg-[#0c3561] rounded-2xl p-6 shadow-xl text-white mb-6">
                   <h3 className="font-head text-2xl font-black mb-2">
                     Solicite seu Orçamento
                   </h3>

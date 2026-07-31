@@ -39,74 +39,67 @@ export default async function HomePage() {
   return (
     <HydrateClient>
       {/* ===== HERO ===== */}
-      <section className="relative min-h-[90vh] flex items-center hero-gradient overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=1600&q=30')] bg-cover bg-center"></div>
-        <div className="container mx-auto px-4 py-16 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left Panel */}
-            <ScrollReveal direction="up">
-              <p className="text-orange-400 font-bold tracking-wider text-xs uppercase mb-3">
-                Estruturas Metálicas & Esquadrias em Geral
-              </p>
-              <h1 className="font-head text-4xl sm:text-5xl xl:text-6xl font-black text-white leading-tight mb-6">
-                Projetos sob medida,<br />
-                do <span className="text-orange-400">alicerce</span> ao acabamento.
-              </h1>
-              <p className="text-blue-100 text-base sm:text-lg leading-relaxed mb-8 max-w-lg">
-                Especialistas em mezaninos metálicos, coberturas de vidro, esquadrias Blindex, automatização de portões e reformas residenciais e comerciais. Atendemos toda a Zona Sul de São Paulo com rigor técnico.
-              </p>
+      <section className="relative w-full h-[calc(100vh-72px)] flex items-end overflow-hidden">
+        {/* Full-bleed background image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/mezanino.png"
+            alt="Mezanino metálico Azultech Engenharia"
+            fill
+            className="object-cover object-center"
+            priority
+          />
+          {/* Dark gradient overlay – stronger at bottom left for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#060f1e]/90 via-[#0c3561]/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#060f1e]/80 via-[#060f1e]/30 to-transparent" />
+        </div>
 
-              <div className="flex flex-col gap-2.5 mb-8">
-                {[
-                  "Parcelamento em até 18x sem juros no cartão",
-                  "Projeto e execução com Engenheiro Civil responsável (ART)",
-                  "Orçamento grátis sem compromisso em até 24h",
-                ].map((feat) => (
-                  <div key={feat} className="flex items-center gap-2.5 text-blue-100 text-sm font-medium">
-                    <span className="text-orange-400 flex-shrink-0"><CheckSVG /></span>
-                    {feat}
-                  </div>
-                ))}
-              </div>
+        {/* Content */}
+        <div className="relative z-10 w-full pb-12 pt-10">
+          <div className="container mx-auto px-4 lg:px-8">
+            <div className="flex flex-col gap-10">
 
-              <div className="flex flex-col sm:flex-row gap-4 mb-10">
-                <Link
-                  href="#orcamento"
-                  className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-xl text-center transition-all duration-300 text-base btn-glow shadow-lg"
-                >
-                  Solicitar Orçamento Grátis
-                </Link>
-                <Link
-                  href="#servicos"
-                  className="border-2 border-white/40 hover:border-white text-white font-semibold px-8 py-4 rounded-xl text-center transition-all duration-300 text-base hover:bg-white/10"
-                >
-                  Ver Serviços
-                </Link>
-              </div>
+              {/* Left – main text */}
+              <ScrollReveal direction="up" className="max-w-2xl">
+                <p className="text-orange-400 font-bold tracking-[0.2em] text-xs uppercase mb-4">
+                  Mezaninos e Serralheria
+                </p>
+                <h1 className="font-head text-5xl sm:text-6xl xl:text-7xl font-black text-white leading-[1.05] mb-6">
+                  Projetos sob medida,{" "}
+                  <span className="italic font-normal text-orange-300" style={{fontFamily:"Georgia, serif"}}>do alicerce</span>
+                  <br />ao acabamento.
+                </h1>
+                <p className="text-white/70 text-base sm:text-lg leading-relaxed mb-8 max-w-xl">
+                  Especialistas em mezaninos metálicos, coberturas de vidro, esquadrias Blindex e reformas residenciais e comerciais. Atendemos toda a Zona Sul de São Paulo.
+                </p>
 
-              <div className="grid grid-cols-4 gap-4 pt-4 border-t border-white/15">
-                {[["18x", "Sem Juros"], ["500+", "Obras Entregues"], ["15+", "Anos Mercado"], ["5.0", "Google"]].map(([num, label]) => (
-                  <div key={label} className="text-center">
-                    <div className="text-2xl sm:text-3xl font-black text-white font-head">{num}</div>
-                    <div className="text-xs text-blue-200 mt-1 font-medium">{label}</div>
-                  </div>
-                ))}
-              </div>
-            </ScrollReveal>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link
+                    href="#orcamento"
+                    className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-xl text-center transition-all duration-300 text-base btn-glow shadow-lg"
+                  >
+                    Solicitar Orçamento Grátis
+                  </Link>
+                  <Link
+                    href="#servicos"
+                    className="border border-white/30 hover:border-white/70 text-white font-semibold px-8 py-4 rounded-xl text-center transition-all duration-300 text-base hover:bg-white/10 backdrop-blur-sm"
+                  >
+                    Ver Serviços
+                  </Link>
+                </div>
 
-            {/* Right Image */}
-            <ScrollReveal direction="left" delay={200} className="hidden lg:block relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
-                <Image
-                  src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=800&q=90"
-                  alt="Estrutura metálica moderna Azultech"
-                  width={800} height={600}
-                  className="w-full h-[540px] object-cover transition-transform duration-700 group-hover:scale-105"
-                  priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#004488]/50 via-transparent to-transparent"></div>
-              </div>
-            </ScrollReveal>
+                {/* Stats bar */}
+                <div className="flex gap-8 mt-10 pt-6 border-t border-white/15">
+                  {[["18x", "Sem Juros"], ["500+", "Obras"], ["15+", "Anos"], ["5.0★", "Google"]].map(([num, label]) => (
+                    <div key={label}>
+                      <div className="text-2xl sm:text-3xl font-black text-white font-head leading-none">{num}</div>
+                      <div className="text-xs text-white/50 mt-1 font-medium uppercase tracking-wider">{label}</div>
+                    </div>
+                  ))}
+                </div>
+              </ScrollReveal>
+
+            </div>
           </div>
         </div>
       </section>
@@ -123,9 +116,9 @@ export default async function HomePage() {
             </p>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="services-grid">
             {services.map((service, index) => (
-              <ScrollReveal key={service.id} delay={index * 50} direction="up">
+              <ScrollReveal key={service.id} delay={index * 50} direction="up" className="w-full">
                 <Link
                   href={`/servicos/${service.slug}`}
                   className="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl border border-gray-100 hover:border-orange-300 transition-all duration-300 hover:-translate-y-2 h-full flex flex-col justify-between block"
@@ -157,7 +150,7 @@ export default async function HomePage() {
             alt="Profissional de obra"
             fill className="object-cover"
           />
-          <div className="absolute inset-0 bg-[#004488]/90 backdrop-blur-xs"></div>
+          <div className="absolute inset-0 bg-[#0c3561]/90 backdrop-blur-xs"></div>
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -236,7 +229,7 @@ export default async function HomePage() {
       </section>
 
       {/* ===== FORMULÁRIO DE ORÇAMENTO ===== */}
-      <section className="py-20 bg-[#004488]" id="orcamento">
+      <section className="py-20 bg-[#0c3561]" id="orcamento">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <ScrollReveal direction="right">

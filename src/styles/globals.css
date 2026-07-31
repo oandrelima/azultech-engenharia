@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --color-azul: #004488;
-  --color-azul-dark: #003366;
-  --color-azul-light: #0066cc;
+  --color-azul: #0c3561;
+  --color-azul-dark: #091f3a;
+  --color-azul-light: #1a5fa8;
   --color-laranja: #f97316;
   --color-laranja-dark: #ea6a0a;
   --font-sans: var(--font-inter), "Inter", sans-serif;
@@ -15,7 +15,7 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply font-sans text-gray-800 antialiased bg-white;
+    @apply font-sans text-gray-800 antialiased bg-white overflow-x-hidden;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-head);
@@ -32,7 +32,7 @@
   .border-laranja { border-color: var(--color-laranja); }
   
   .hero-gradient {
-    background: linear-gradient(135deg, #004488 0%, #003366 50%, #001e3d 100%);
+    background: linear-gradient(135deg, #0c3561 0%, #091f3a 50%, #060f1e 100%);
   }
 
   /* Enhanced Interactive Hover Effects */
@@ -45,12 +45,50 @@
   }
 
   .btn-glow-blue {
-    @apply relative overflow-hidden transition-all duration-300 active:scale-95 hover:shadow-[0_8px_25px_rgba(0,68,136,0.4)];
+    @apply relative overflow-hidden transition-all duration-300 active:scale-95 hover:shadow-[0_8px_25px_rgba(12,53,97,0.4)];
   }
 
   .glass-card {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(12px);
     border: 1px solid rgba(229, 231, 235, 0.8);
+  }
+
+  /* Hero floating card glass effect */
+  .hero-float-card {
+    background: rgba(10, 25, 50, 0.72);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  /* Services grid – center last-row items */
+  .services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  .services-grid > * {
+    flex: 1 1 calc(25% - 1.5rem);
+    min-width: 220px;
+    max-width: calc(25% - 1.5rem);
+  }
+  @media (max-width: 1279px) {
+    .services-grid > * {
+      flex: 1 1 calc(33.333% - 1.5rem);
+      max-width: calc(33.333% - 1.5rem);
+    }
+  }
+  @media (max-width: 1023px) {
+    .services-grid > * {
+      flex: 1 1 calc(50% - 1.5rem);
+      max-width: calc(50% - 1.5rem);
+    }
+  }
+  @media (max-width: 639px) {
+    .services-grid > * {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
   }
 }
