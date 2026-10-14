@@ -1,7 +1,6 @@
 ﻿import Link from "next/link";
 import Image from "next/image";
 import { company } from "~/lib/company";
-import { coverage } from "~/lib/coverage";
 import { CoverageMap } from "~/components/CoverageMap";
 import { Icon } from "~/components/Icon";
 import { ScrollReveal } from "~/components/ScrollReveal";
@@ -69,8 +68,6 @@ export default function SobrePage() {
           <p className="mb-4 text-xs font-bold uppercase tracking-[.18em] text-orange-600">Perto do seu projeto</p>
           <h2 className="font-head text-3xl font-black leading-tight text-slate-900 sm:text-4xl">São Paulo e <span className="text-orange-500">região.</span></h2>
           <p className="mt-5 text-base leading-8 text-slate-600">Partimos do Jardim Umarizal, na Zona Sul, para atender projetos residenciais e comerciais.</p>
-          <div className="my-6 flex items-baseline gap-2"><span className="text-4xl font-black text-[#0c3561]">{coverage.radiusKm} km</span><span className="text-sm text-slate-500">de raio de referência</span></div>
-          <p className="text-sm leading-7 text-slate-500">Raio calculado a partir dos pontos de referência das {coverage.locationsCount} localidades atendidas, em linha reta. Consulte a disponibilidade para o seu endereço.</p>
           <a href={`https://wa.me/${company.whatsapp}?text=${encodeURIComponent("Olá! Gostaria de consultar o atendimento para o meu endereço.")}`} target="_blank" rel="noopener noreferrer" className="mt-7 inline-flex items-center gap-3 rounded-xl bg-orange-500 px-6 py-4 text-sm font-bold text-white hover:bg-orange-600">Consultar meu endereço <Icon name="arrow" className="h-4 w-4" /></a>
         </div>
         <CoverageMap />
