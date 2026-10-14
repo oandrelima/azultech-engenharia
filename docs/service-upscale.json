@@ -1,0 +1,230 @@
+{
+  "mode": "built-in imagegen",
+  "prompt": "Upscale and faithfully restore this exact service photograph to high resolution. Preserve the same scene, structural geometry, materials, colors, objects and camera framing. Remove compression artifacts and improve natural sharpness; do not redesign or invent details, do not add text or logos. Return one photograph with the same aspect ratio, at least 2048 pixels wide.",
+  "images": [
+    {
+      "file": "public/images/galleries/automatizacao-de-portoes\\2.webp",
+      "width": 1002,
+      "height": 668,
+      "output": "public/images/galleries/automatizacao-de-portoes/2-hd.webp",
+      "outputWidth": 1536,
+      "outputHeight": 1024
+    },
+    {
+      "file": "public/images/galleries/box-para-banheiro\\1.webp",
+      "width": 600,
+      "height": 600,
+      "output": "public/images/galleries/box-para-banheiro/1-hd.webp",
+      "outputWidth": 1254,
+      "outputHeight": 1254
+    },
+    {
+      "file": "public/images/galleries/box-para-banheiro\\2.webp",
+      "width": 600,
+      "height": 600,
+      "output": "public/images/galleries/box-para-banheiro/2-hd.webp",
+      "outputWidth": 1254,
+      "outputHeight": 1254
+    },
+    {
+      "file": "public/images/galleries/box-para-banheiro\\3.webp",
+      "width": 624,
+      "height": 800,
+      "output": "public/images/galleries/box-para-banheiro/3-hd.webp",
+      "outputWidth": 1107,
+      "outputHeight": 1421
+    },
+    {
+      "file": "public/images/galleries/cobertura-de-vidro\\1.webp",
+      "width": 563,
+      "height": 1000,
+      "output": "public/images/galleries/cobertura-de-vidro/1-hd.webp",
+      "outputWidth": 941,
+      "outputHeight": 1672
+    },
+    {
+      "file": "public/images/galleries/cobertura-de-vidro\\2.webp",
+      "width": 563,
+      "height": 1000,
+      "output": "public/images/galleries/cobertura-de-vidro/2-hd.webp",
+      "outputWidth": 941,
+      "outputHeight": 1672
+    },
+    {
+      "file": "public/images/galleries/cobertura-metalica\\1.webp",
+      "width": 800,
+      "height": 800,
+      "output": "public/images/galleries/cobertura-metalica/1-hd.webp",
+      "outputWidth": 1254,
+      "outputHeight": 1254
+    },
+    {
+      "file": "public/images/galleries/cobertura-metalica\\2.webp",
+      "width": 800,
+      "height": 400,
+      "output": "public/images/galleries/cobertura-metalica/2-hd.webp",
+      "outputWidth": 1774,
+      "outputHeight": 887
+    },
+    {
+      "file": "public/images/galleries/cobertura-metalica\\3.webp",
+      "width": 270,
+      "height": 202,
+      "output": "public/images/galleries/cobertura-metalica/3-hd.webp",
+      "outputWidth": 1450,
+      "outputHeight": 1085
+    },
+    {
+      "file": "public/images/galleries/fechamento-de-sacadas\\1.webp",
+      "width": 800,
+      "height": 534,
+      "output": "public/images/galleries/fechamento-de-sacadas/1-hd.webp",
+      "outputWidth": 1535,
+      "outputHeight": 1024
+    },
+    {
+      "file": "public/images/galleries/forro-de-gesso-e-acabamentos\\1.webp",
+      "width": 720,
+      "height": 540,
+      "output": "public/images/galleries/forro-de-gesso-e-acabamentos/1-hd.webp",
+      "outputWidth": 1448,
+      "outputHeight": 1086
+    },
+    {
+      "file": "public/images/galleries/janelas-de-vidro-blindex\\1.webp",
+      "width": 907,
+      "height": 907,
+      "output": "public/images/galleries/janelas-de-vidro-blindex/1-hd.webp",
+      "outputWidth": 1254,
+      "outputHeight": 1254
+    },
+    {
+      "file": "public/images/galleries/janelas-de-vidro-blindex\\2.webp",
+      "width": 375,
+      "height": 500,
+      "output": "public/images/galleries/janelas-de-vidro-blindex/2-hd.webp",
+      "outputWidth": 1086,
+      "outputHeight": 1448
+    },
+    {
+      "file": "public/images/galleries/janelas-de-vidro-blindex\\3.webp",
+      "width": 750,
+      "height": 498,
+      "output": "public/images/galleries/janelas-de-vidro-blindex/3-hd.webp",
+      "outputWidth": 1540,
+      "outputHeight": 1021
+    },
+    {
+      "file": "public/images/galleries/mezaninos-metalicos\\1.webp",
+      "width": 800,
+      "height": 600,
+      "output": "public/images/galleries/mezaninos-metalicos/1-hd.webp",
+      "outputWidth": 1448,
+      "outputHeight": 1086
+    },
+    {
+      "file": "public/images/galleries/mezaninos-metalicos\\2.webp",
+      "width": 800,
+      "height": 600,
+      "output": "public/images/galleries/mezaninos-metalicos/2-hd.webp",
+      "outputWidth": 1448,
+      "outputHeight": 1086
+    },
+    {
+      "file": "public/images/galleries/mezaninos-metalicos\\3.webp",
+      "width": 800,
+      "height": 548,
+      "output": "public/images/galleries/mezaninos-metalicos/3-hd.webp",
+      "outputWidth": 1516,
+      "outputHeight": 1038
+    },
+    {
+      "file": "public/images/galleries/mezaninos-para-apartamentos\\1.webp",
+      "width": 633,
+      "height": 600,
+      "output": "public/images/galleries/mezaninos-para-apartamentos/1-hd.webp",
+      "outputWidth": 1289,
+      "outputHeight": 1221
+    },
+    {
+      "file": "public/images/galleries/mezaninos-para-apartamentos\\2.webp",
+      "width": 500,
+      "height": 500,
+      "output": "public/images/galleries/mezaninos-para-apartamentos/2-hd.webp",
+      "outputWidth": 1254,
+      "outputHeight": 1254
+    },
+    {
+      "file": "public/images/galleries/mezaninos-para-apartamentos\\3.webp",
+      "width": 700,
+      "height": 525,
+      "output": "public/images/galleries/mezaninos-para-apartamentos/3-hd.webp",
+      "outputWidth": 1448,
+      "outputHeight": 1086
+    },
+    {
+      "file": "public/images/galleries/mezaninos-residenciais\\1.webp",
+      "width": 564,
+      "height": 698,
+      "output": "public/images/galleries/mezaninos-residenciais/1-hd.webp",
+      "outputWidth": 1127,
+      "outputHeight": 1396
+    },
+    {
+      "file": "public/images/galleries/mezaninos-residenciais\\2.webp",
+      "width": 768,
+      "height": 512,
+      "output": "public/images/galleries/mezaninos-residenciais/2-hd.webp",
+      "outputWidth": 1536,
+      "outputHeight": 1024
+    },
+    {
+      "file": "public/images/galleries/mezaninos-residenciais\\3.webp",
+      "width": 736,
+      "height": 984,
+      "output": "public/images/galleries/mezaninos-residenciais/3-hd.webp",
+      "outputWidth": 1084,
+      "outputHeight": 1451
+    },
+    {
+      "file": "public/images/galleries/portas-de-vidro-blindex\\1.webp",
+      "width": 400,
+      "height": 300,
+      "output": "public/images/galleries/portas-de-vidro-blindex/1-hd.webp",
+      "outputWidth": 1448,
+      "outputHeight": 1086
+    },
+    {
+      "file": "public/images/galleries/portas-de-vidro-blindex\\2.webp",
+      "width": 500,
+      "height": 378,
+      "output": "public/images/galleries/portas-de-vidro-blindex/2-hd.webp",
+      "outputWidth": 1442,
+      "outputHeight": 1091
+    },
+    {
+      "file": "public/images/galleries/portas-de-vidro-blindex\\3.webp",
+      "width": 736,
+      "height": 981,
+      "output": "public/images/galleries/portas-de-vidro-blindex/3-hd.webp",
+      "outputWidth": 1086,
+      "outputHeight": 1448
+    },
+    {
+      "file": "public/images/galleries/reforma-de-portoes-de-aluminio\\1.webp",
+      "width": 1002,
+      "height": 668,
+      "output": "public/images/galleries/reforma-de-portoes-de-aluminio/1-hd.webp",
+      "outputWidth": 1536,
+      "outputHeight": 1024
+    },
+    {
+      "file": "public/images/galleries/servicos-de-hidraulica\\1.webp",
+      "width": 1111,
+      "height": 1000,
+      "output": "public/images/galleries/servicos-de-hidraulica/1-hd.webp",
+      "outputWidth": 1322,
+      "outputHeight": 1190
+    }
+  ]
+}

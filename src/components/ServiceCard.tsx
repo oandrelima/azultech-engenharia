@@ -9,7 +9,7 @@ interface ServiceCardProps {
 export function ServiceCard({ service }: ServiceCardProps) {
   return <Link href={`/servicos/${service.slug}`} className="service-card">
     <div className="service-card-photo">
-      <Image src={service.imageUrl} alt={"Imagem ilustrativa de " + service.title} fill sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 25vw" className="object-cover" />
+      <Image src={service.imageUrl} alt={service.title} fill quality={85} sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 25vw" className="object-cover" />
       <span className="service-card-category">{service.categoryName}</span>
     </div>
     <div className="service-card-body">

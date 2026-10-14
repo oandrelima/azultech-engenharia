@@ -1,67 +1,67 @@
 {
   "mezaninos-metalicos": [
     {
-      "src": "/images/galleries/mezaninos-metalicos/1.webp",
+      "src": "/images/galleries/mezaninos-metalicos/1-hd.webp",
       "illustrative": false
     },
     {
-      "src": "/images/galleries/mezaninos-metalicos/2.webp",
+      "src": "/images/galleries/mezaninos-metalicos/2-hd.webp",
       "illustrative": false
     },
     {
-      "src": "/images/galleries/mezaninos-metalicos/3.webp",
+      "src": "/images/galleries/mezaninos-metalicos/3-hd.webp",
       "illustrative": false
     }
   ],
   "mezaninos-residenciais": [
     {
-      "src": "/images/galleries/mezaninos-residenciais/1.webp",
+      "src": "/images/galleries/mezaninos-residenciais/1-hd.webp",
       "illustrative": false
     },
     {
-      "src": "/images/galleries/mezaninos-residenciais/2.webp",
+      "src": "/images/galleries/mezaninos-residenciais/2-hd.webp",
       "illustrative": false
     },
     {
-      "src": "/images/galleries/mezaninos-residenciais/3.webp",
+      "src": "/images/galleries/mezaninos-residenciais/3-hd.webp",
       "illustrative": false
     }
   ],
   "mezaninos-para-apartamentos": [
     {
-      "src": "/images/galleries/mezaninos-para-apartamentos/1.webp",
+      "src": "/images/galleries/mezaninos-para-apartamentos/1-hd.webp",
       "illustrative": false
     },
     {
-      "src": "/images/galleries/mezaninos-para-apartamentos/2.webp",
+      "src": "/images/galleries/mezaninos-para-apartamentos/2-hd.webp",
       "illustrative": false
     },
     {
-      "src": "/images/galleries/mezaninos-para-apartamentos/3.webp",
+      "src": "/images/galleries/mezaninos-para-apartamentos/3-hd.webp",
       "illustrative": false
     }
   ],
   "cobertura-metalica": [
     {
-      "src": "/images/galleries/cobertura-metalica/1.webp",
+      "src": "/images/galleries/cobertura-metalica/1-hd.webp",
       "illustrative": false
     },
     {
-      "src": "/images/galleries/cobertura-metalica/2.webp",
+      "src": "/images/galleries/cobertura-metalica/2-hd.webp",
       "illustrative": false
     },
     {
-      "src": "/images/galleries/cobertura-metalica/3.webp",
+      "src": "/images/galleries/cobertura-metalica/3-hd.webp",
       "illustrative": false
     }
   ],
   "cobertura-de-vidro": [
     {
-      "src": "/images/galleries/cobertura-de-vidro/1.webp",
+      "src": "/images/galleries/cobertura-de-vidro/1-hd.webp",
       "illustrative": false
     },
     {
-      "src": "/images/galleries/cobertura-de-vidro/2.webp",
+      "src": "/images/galleries/cobertura-de-vidro/2-hd.webp",
       "illustrative": false
     },
     {
@@ -71,29 +71,29 @@
   ],
   "janelas-de-vidro-blindex": [
     {
-      "src": "/images/galleries/janelas-de-vidro-blindex/1.webp",
+      "src": "/images/galleries/janelas-de-vidro-blindex/1-hd.webp",
       "illustrative": false
     },
     {
-      "src": "/images/galleries/janelas-de-vidro-blindex/2.webp",
+      "src": "/images/galleries/janelas-de-vidro-blindex/2-hd.webp",
       "illustrative": false
     },
     {
-      "src": "/images/galleries/janelas-de-vidro-blindex/3.webp",
+      "src": "/images/galleries/janelas-de-vidro-blindex/3-hd.webp",
       "illustrative": false
     }
   ],
   "portas-de-vidro-blindex": [
     {
-      "src": "/images/galleries/portas-de-vidro-blindex/1.webp",
+      "src": "/images/galleries/portas-de-vidro-blindex/1-hd.webp",
       "illustrative": false
     },
     {
-      "src": "/images/galleries/portas-de-vidro-blindex/2.webp",
+      "src": "/images/galleries/portas-de-vidro-blindex/2-hd.webp",
       "illustrative": false
     },
     {
-      "src": "/images/galleries/portas-de-vidro-blindex/3.webp",
+      "src": "/images/galleries/portas-de-vidro-blindex/3-hd.webp",
       "illustrative": false
     }
   ],
@@ -103,7 +103,7 @@
       "illustrative": false
     },
     {
-      "src": "/images/galleries/automatizacao-de-portoes/2.webp",
+      "src": "/images/galleries/automatizacao-de-portoes/2-hd.webp",
       "illustrative": false
     },
     {
@@ -113,7 +113,7 @@
   ],
   "reforma-de-portoes-de-aluminio": [
     {
-      "src": "/images/galleries/reforma-de-portoes-de-aluminio/1.webp",
+      "src": "/images/galleries/reforma-de-portoes-de-aluminio/1-hd.webp",
       "illustrative": false
     },
     {
@@ -127,21 +127,21 @@
   ],
   "box-para-banheiro": [
     {
-      "src": "/images/galleries/box-para-banheiro/1.webp",
+      "src": "/images/galleries/box-para-banheiro/1-hd.webp",
       "illustrative": false
     },
     {
-      "src": "/images/galleries/box-para-banheiro/2.webp",
+      "src": "/images/galleries/box-para-banheiro/2-hd.webp",
       "illustrative": false
     },
     {
-      "src": "/images/galleries/box-para-banheiro/3.webp",
+      "src": "/images/galleries/box-para-banheiro/3-hd.webp",
       "illustrative": false
     }
   ],
   "fechamento-de-sacadas": [
     {
-      "src": "/images/galleries/fechamento-de-sacadas/1.webp",
+      "src": "/images/galleries/fechamento-de-sacadas/1-hd.webp",
       "illustrative": false
     },
     {
@@ -169,7 +169,7 @@
   ],
   "servicos-de-hidraulica": [
     {
-      "src": "/images/galleries/servicos-de-hidraulica/1.webp",
+      "src": "/images/galleries/servicos-de-hidraulica/1-hd.webp",
       "illustrative": false
     },
     {
@@ -183,7 +183,7 @@
   ],
   "forro-de-gesso-e-acabamentos": [
     {
-      "src": "/images/galleries/forro-de-gesso-e-acabamentos/1.webp",
+      "src": "/images/galleries/forro-de-gesso-e-acabamentos/1-hd.webp",
       "illustrative": false
     },
     {

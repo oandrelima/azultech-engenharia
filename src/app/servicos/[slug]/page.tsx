@@ -87,7 +87,6 @@ export default async function ServicePage({ params }: Props) {
             <p className="text-blue-100 text-base sm:text-lg leading-relaxed max-w-2xl">
               {service.shortDescription}
             </p>
-            <p className="text-xs text-blue-200/70 mt-3">Imagem de fundo ilustrativa.</p>
           </ScrollReveal>
         </div>
       </section>

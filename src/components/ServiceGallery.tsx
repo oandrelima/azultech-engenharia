@@ -31,8 +31,7 @@ export function ServiceGallery({ title, images }: { title: string; images: { src
     <div ref={track} id={id} tabIndex={0} onKeyDown={onKey} className="gallery-track"
       onScroll={() => { if (track.current) setActive(Math.min(images.length - 1, Math.round(track.current.scrollLeft / track.current.clientWidth))); }}>
       {images.map((photo, index) => <figure key={photo.src} className="gallery-slide" role="group" aria-label={`Foto ${index + 1} de ${images.length}`}>
-        <Image src={photo.src} alt={`${title} — referência visual ${index + 1}`} fill sizes="(max-width: 1023px) 100vw, 65vw" className="object-cover" />
-        <figcaption>{photo.illustrative ? "Imagem ilustrativa" : "Referência de aplicação"}</figcaption>
+        <Image src={photo.src} alt={`${title} — foto ${index + 1}`} fill quality={90} sizes="(max-width: 1023px) 100vw, 65vw" className="object-cover" />
       </figure>)}
     </div>
     <div className="flex items-center gap-3 px-5 py-4 sm:px-6">

@@ -9,7 +9,8 @@
   workingHours: "Consulte a disponibilidade pelo WhatsApp.",
   coverageNeighborhoods: ["Campo Limpo", "Taboão da Serra", "Itapecerica da Serra", "Morumbi", "Butantã", "Lapa", "Vila Leopoldina", "Osasco", "Cotia", "Granja Viana", "Capão Redondo", "Santo Amaro", "Brooklin", "Berrini", "Vila Olímpia", "Moema", "Vila Nova Conceição", "Vila Mariana", "Saúde", "Paraíso", "Ipiranga", "Jabaquara", "Brás", "Bom Retiro", "Centro"],
 };
-export const mapsUrl = `https://maps.google.com/maps?q=${encodeURIComponent(company.address + ", " + company.cep)}&z=16&output=embed`;
+export const googleMapsEmbedUrl = (query: string, zoom = 16) => `https://maps.google.com/maps?q=${encodeURIComponent(query)}${/^-?\d+(\.\d+)?,-?\d+(\.\d+)?$/.test(query) ? `&ll=${encodeURIComponent(query)}` : ""}&z=${zoom}&output=embed`;
+export const mapsUrl = googleMapsEmbedUrl(company.address + ", " + company.cep);
 export const organizationSchema = {
   "@context": "https://schema.org", "@type": "GeneralContractor", "@id": company.website + "#organization",
   name: company.tradeName, legalName: company.companyName, taxID: company.cnpj, foundingDate: company.founded,
