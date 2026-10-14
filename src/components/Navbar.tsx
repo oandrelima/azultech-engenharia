@@ -177,7 +177,7 @@ export function Navbar() {
                 </Link>
               ))}
 
-              <Link href="/servicos" onClick={() => setMobileOpen(false)} className="px-3 py-2 text-orange-300 text-sm font-semibold">Todos os serviços →</Link>
+              <Link href="/servicos" onClick={() => setMobileOpen(false)} className="px-3 py-2 text-orange-500 text-sm font-semibold">Todos os serviços →</Link>
               {/* Mobile Services accordion */}
               <button
                 onClick={() => setMobileServicesOpen(!mobileServicesOpen)}

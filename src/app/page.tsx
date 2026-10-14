@@ -46,12 +46,12 @@ export default function HomePage() {
 
               {/* Left – main text */}
               <ScrollReveal direction="up" className="max-w-2xl">
-                <p className="text-orange-300 font-bold tracking-[0.2em] text-xs uppercase mb-4">
+                <p className="text-orange-500 font-bold tracking-[0.2em] text-xs uppercase mb-4">
                   Mezaninos e Serralheria
                 </p>
                 <h1 className="font-head text-5xl sm:text-6xl xl:text-7xl font-black text-white leading-[1.05] mb-6">
                   Projetos sob medida,{" "}
-                  <span className="italic font-normal text-orange-300" style={{fontFamily:"Georgia, serif"}}>do alicerce</span>
+                  <span className="italic font-normal text-orange-500" style={{fontFamily:"Georgia, serif"}}>do alicerce</span>
                   <br />ao acabamento.
                 </h1>
                 <p className="text-white/95 text-base sm:text-lg leading-relaxed mb-8 max-w-xl">
@@ -122,8 +122,8 @@ export default function HomePage() {
               </figure>
             </ScrollReveal>
             <ScrollReveal direction="left" delay={100}>
-              <p className="mb-4 text-xs font-bold uppercase tracking-[.2em] text-orange-300">Da oficina ao seu espaço</p>
-              <h2 className="font-head text-3xl sm:text-4xl xl:text-5xl font-black leading-[1.12] text-white">Trabalhe com os melhores,<br /><span className="text-orange-300">receba o melhor.</span></h2>
+              <p className="mb-4 text-xs font-bold uppercase tracking-[.2em] text-orange-500">Da oficina ao seu espaço</p>
+              <h2 className="font-head text-3xl sm:text-4xl xl:text-5xl font-black leading-[1.12] text-white">Trabalhe com os melhores,<br /><span className="text-orange-500">receba o melhor.</span></h2>
               <p className="mt-6 text-base leading-8 text-white/90">Fabricação, instalação e manutenção para transformar ambientes residenciais e comerciais. Converse com quem vai ajudar a tirar sua ideia do papel.</p>
               <div className="my-8 grid gap-4 sm:grid-cols-2">
                 {[
@@ -131,7 +131,7 @@ export default function HomePage() {
                   ["Soluções completas", "Da estrutura metálica ao acabamento."],
                   ["Sob medida", "Materiais escolhidos para cada ambiente."],
                   ["Até 18x sem juros", "Consulte as condições para o projeto."],
-                ].map(([title, description]) => <div key={title} className="team-feature"><Icon name="check" className="mb-3 h-5 w-5 text-orange-300" /><h3 className="font-bold text-white">{title}</h3><p className="mt-2 text-sm leading-6 text-white/80">{description}</p></div>)}
+                ].map(([title, description]) => <div key={title} className="team-feature"><Icon name="check" className="mb-3 h-5 w-5 text-orange-500" /><h3 className="font-bold text-white">{title}</h3><p className="mt-2 text-sm leading-6 text-white/80">{description}</p></div>)}
               </div>
               <Link href="/sobre" className="inline-flex items-center gap-3 rounded-xl bg-orange-500 px-7 py-4 font-bold text-white transition-colors hover:bg-orange-600">Conheça nossa equipe <Icon name="arrow" /></Link>
             </ScrollReveal>
@@ -147,7 +147,7 @@ export default function HomePage() {
             <ScrollReveal direction="right">
               <div className="text-white">
                 <h2 className="font-head text-3xl sm:text-4xl font-black mb-4">
-                  Solicite seu <span className="text-orange-400">orçamento grátis</span>
+                  Solicite seu <span className="text-orange-500">orçamento grátis</span>
                 </h2>
                 <p className="text-blue-100 text-base leading-relaxed mb-8">
                   Preencha os dados do projeto e continue a conversa pelo WhatsApp, com todas as informações organizadas.

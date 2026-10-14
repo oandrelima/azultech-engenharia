@@ -17,7 +17,7 @@ export default function SobrePage() {
       <div className="absolute inset-0 bg-gradient-to-r from-[#091f3a]/90 via-[#0c3561]/80 to-[#060f1e]/90" />
       <div className="container mx-auto px-4 relative z-10">
         <nav className="mb-5 flex gap-2 text-xs text-blue-200"><Link href="/">Início</Link><span>/</span><span className="text-white">Sobre</span></nav>
-        <h1 className="font-head text-3xl font-black text-white sm:text-4xl lg:text-5xl">Sobre a <span className="text-orange-300">Azultech</span></h1>
+        <h1 className="font-head text-3xl font-black text-white sm:text-4xl lg:text-5xl">Sobre a <span className="text-orange-500">Azultech</span></h1>
         <p className="mt-4 max-w-xl text-base leading-7 text-white/85">Gente que entende de transformar ideias em espaços para viver e trabalhar.</p>
       </div>
     </section>

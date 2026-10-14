@@ -29,7 +29,7 @@ export default function ServicosPage() {
             <span className="text-white font-medium">Serviços</span>
           </nav>
           <h1 className="font-head text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight mb-2">
-            Nossos <span className="text-orange-400">Serviços</span>
+            Nossos <span className="text-orange-500">Serviços</span>
           </h1>
           <p className="text-blue-100 text-base sm:text-lg max-w-2xl">
             Soluções completas em engenharia civil para residências e empresas na Zona Sul de São Paulo.

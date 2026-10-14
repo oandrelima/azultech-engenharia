@@ -28,7 +28,7 @@ export default function ContatoPage() {
             <span className="text-white font-medium">Contato</span>
           </nav>
           <h1 className="font-head text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight mb-2">
-            Fale com a <span className="text-orange-400">Azultech</span>
+            Fale com a <span className="text-orange-500">Azultech</span>
           </h1>
           <p className="text-blue-100 text-base sm:text-lg max-w-2xl">
             Solicite seu orçamento sem compromisso. Fale com a equipe sobre seu projeto.
@@ -42,7 +42,7 @@ export default function ContatoPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div className="text-white">
               <h2 className="font-head text-3xl sm:text-4xl font-black mb-4">
-                Solicite seu <span className="text-orange-400">orçamento grátis</span>
+                Solicite seu <span className="text-orange-500">orçamento grátis</span>
               </h2>
               <p className="text-blue-100 text-base leading-relaxed mb-8">
                 Preencha o formulário e abra o WhatsApp com os dados do projeto prontos para enviar.

@@ -29,7 +29,7 @@ export default async function BlogPage() {
             <span className="text-white font-medium">Dicas</span>
           </nav>
           <h1 className="font-head text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight mb-2">
-            Dicas & <span className="text-orange-400">Artigos</span>
+            Dicas & <span className="text-orange-500">Artigos</span>
           </h1>
           <p className="text-blue-100 text-base sm:text-lg max-w-2xl">
             Conteúdo especializado sobre reformas, manutenção e engenharia civil para sua casa ou empresa.
