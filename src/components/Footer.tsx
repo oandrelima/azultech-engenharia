@@ -11,7 +11,7 @@ export function Footer() {
           {/* Brand */}
           <div>
             <div className="mb-4"><Brand /></div>
-            <p className="text-xs text-gray-400 leading-6 mb-4">{company.companyName}<br />CNPJ {company.cnpj}<br />Fundada em {company.foundedLabel}</p>
+            <p className="text-xs text-gray-400 leading-6 mb-4">{company.companyName}<br />CNPJ {company.cnpj}</p>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               Estruturas metálicas, esquadrias e reformas residenciais e comerciais na Zona Sul de São Paulo com qualidade e transparência.
             </p>

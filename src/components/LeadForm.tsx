@@ -1,148 +1,62 @@
-"use client";
+﻿"use client";
 
+import { useId, useState, type FormEvent } from "react";
 import { serviceCatalog } from "~/lib/services";
-import { Icon } from "~/components/Icon";
-import { useState, useId } from "react";
-import { api } from "~/trpc/react";
+import { buildWhatsAppUrl } from "~/lib/whatsapp";
+import { Icon } from "./Icon";
 
-const SERVICE_TYPES = [...serviceCatalog.map(s => s.title), "Outro"];
-
-interface LeadFormProps {
-  defaultService?: string;
-}
-
-export function LeadForm({ defaultService }: LeadFormProps) {
-  const formId = useId();
+export function LeadForm({ defaultService }: { defaultService?: string }) {
+  const id = useId();
   const [form, setForm] = useState({
-    name: "", phone: "", email: "", neighborhood: "",
-    serviceType: defaultService ?? "", projectType: "Residencial", message: "",
-  });
-  const [success, setSuccess] = useState(false);
-  const [error, setError] = useState("");
-
-  const createLead = api.leads.create.useMutation({
-    onSuccess: () => setSuccess(true),
-    onError: (err) => setError(err.message || "Erro ao enviar. Tente novamente."),
+    name: "", address: "", serviceType: defaultService ?? "",
+    projectType: "Residencial", message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setError("");
-    createLead.mutate(form);
-  };
-
-  if (success) {
-    return (
-      <div className="bg-white rounded-lg p-8 text-center border border-slate-200 text-gray-800">
-        <div className="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-2xl">
-          <Icon name="check" />
-        </div>
-        <h3 className="text-2xl font-bold text-[#0c3561] mb-2">Recebemos sua solicitação!</h3>
-        <p className="text-gray-600 mb-6 text-sm">Nossa equipe entrará em contato para conversar sobre o projeto. Ou se preferir, fale agora pelo WhatsApp.</p>
-        <a
-          href="https://wa.me/5511939217592"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold px-6 py-3 rounded-lg transition-colors text-sm"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326z" />
-          </svg>
-          Falar no WhatsApp
-        </a>
-      </div>
-    );
+  function submit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (!event.currentTarget.reportValidity()) return;
+    window.location.assign(buildWhatsAppUrl(form));
   }
 
-  return (
-    <form onSubmit={handleSubmit} className="bg-white rounded-lg p-6 sm:p-8 border border-slate-200 space-y-4 text-gray-800">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div>
-          <label htmlFor={formId + "-name"} className="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1">
-            Nome completo <span className="text-orange-500">*</span>
-          </label>
-          <input id={formId + "-name"} name="name"
-            type="text" required placeholder="Seu nome"
-            value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })}
-            className="w-full px-3.5 py-2.5 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0c3561] focus:border-transparent outline-none transition-all"
-          />
-        </div>
-        <div>
-          <label htmlFor={formId + "-phone"} className="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1">
-            Telefone / WhatsApp <span className="text-orange-500">*</span>
-          </label>
-          <input id={formId + "-phone"} name="phone"
-            type="tel" required placeholder="(11) 99999-9999"
-            value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })}
-            className="w-full px-3.5 py-2.5 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0c3561] focus:border-transparent outline-none transition-all"
-          />
-        </div>
-        <div>
-          <label htmlFor={formId + "-email"} className="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1">E-mail</label>
-          <input id={formId + "-email"} name="email"
-            type="email" placeholder="seu@email.com"
-            value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })}
-            className="w-full px-3.5 py-2.5 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0c3561] focus:border-transparent outline-none transition-all"
-          />
-        </div>
-        <div>
-          <label htmlFor={formId + "-neighborhood"} className="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1">Bairro</label>
-          <input id={formId + "-neighborhood"} name="neighborhood"
-            type="text" placeholder="Ex: Morumbi, Campo Limpo..."
-            value={form.neighborhood} onChange={(e) => setForm({ ...form, neighborhood: e.target.value })}
-            className="w-full px-3.5 py-2.5 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0c3561] focus:border-transparent outline-none transition-all"
-          />
-        </div>
-      </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div>
-          <label htmlFor={formId + "-serviceType"} className="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1">
-            Serviço desejado <span className="text-orange-500">*</span>
-          </label>
-          <select id={formId + "-serviceType"} name="serviceType"
-            required value={form.serviceType} onChange={(e) => setForm({ ...form, serviceType: e.target.value })}
-            className="w-full px-3.5 py-2.5 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0c3561] focus:border-transparent outline-none transition-all bg-white"
-          >
-            <option value="">Selecione um serviço</option>
-            {SERVICE_TYPES.map((s) => <option key={s} value={s}>{s}</option>)}
-          </select>
-        </div>
-        <div>
-          <label htmlFor={formId + "-projectType"} className="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1">Tipo de imóvel</label>
-          <select id={formId + "-projectType"} name="projectType"
-            value={form.projectType} onChange={(e) => setForm({ ...form, projectType: e.target.value })}
-            className="w-full px-3.5 py-2.5 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0c3561] focus:border-transparent outline-none transition-all bg-white"
-          >
-            <option value="Residencial">Residencial</option>
-            <option value="Comercial">Comercial</option>
-            <option value="Industrial">Industrial</option>
-          </select>
-        </div>
-      </div>
-
-      <div>
-        <label htmlFor={formId + "-message"} className="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1">
-          Descrição do projeto <span className="text-orange-500">*</span>
-        </label>
-        <textarea id={formId + "-message"} name="message"
-          required rows={3} placeholder="Descreva o que você precisa..."
-          value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })}
-          className="w-full px-3.5 py-2.5 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0c3561] focus:border-transparent outline-none transition-all resize-none"
-        />
-      </div>
-
-      {error && (
-        <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-2.5 rounded-lg text-xs">{error}</div>
-      )}
-
-      <button
-        type="submit"
-        disabled={createLead.isPending}
-        className="w-full bg-orange-500 hover:bg-orange-600 disabled:opacity-70 disabled:cursor-not-allowed text-white font-bold py-3.5 px-6 rounded-lg transition-colors text-base"
-      >
-        {createLead.isPending ? "Enviando..." : "Solicitar Orçamento Grátis →"}
-      </button>
-    </form>
-  );
+  return <form onSubmit={submit} className="quote-form">
+    <div>
+      <label htmlFor={id + "-name"}>Nome Completo <span>*</span></label>
+      <input id={id + "-name"} name="name" autoComplete="name" required minLength={2} maxLength={150}
+        placeholder="Como podemos chamar você?"
+        value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} />
+    </div>
+    <div>
+      <label htmlFor={id + "-address"}>Endereço <span>*</span></label>
+      <input id={id + "-address"} name="address" autoComplete="street-address" required minLength={5} maxLength={300}
+        placeholder="Rua, número, bairro e cidade"
+        value={form.address} onChange={e => setForm({ ...form, address: e.target.value })} />
+    </div>
+    <div>
+      <label htmlFor={id + "-service"}>Serviço desejado <span>*</span></label>
+      <select id={id + "-service"} name="serviceType" required
+        value={form.serviceType} onChange={e => setForm({ ...form, serviceType: e.target.value })}>
+        <option value="">Selecione um serviço</option>
+        {serviceCatalog.map(s => <option key={s.slug} value={s.title}>{s.title}</option>)}
+        <option value="Outro">Outro</option>
+      </select>
+    </div>
+    <div>
+      <label htmlFor={id + "-type"}>Tipo de imóvel <span>*</span></label>
+      <select id={id + "-type"} name="projectType" required
+        value={form.projectType} onChange={e => setForm({ ...form, projectType: e.target.value })}>
+        <option value="Residencial">Residencial</option>
+        <option value="Comercial">Comercial</option>
+        <option value="Industrial">Industrial</option>
+        <option value="Condomínio">Condomínio</option>
+      </select>
+    </div>
+    <div>
+      <label htmlFor={id + "-message"}>Descrição adicional <small>Opcional</small></label>
+      <textarea id={id + "-message"} name="message" rows={3} maxLength={5000}
+        placeholder="Medidas aproximadas, referências ou outras informações..."
+        value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} />
+    </div>
+    <button type="submit" className="quote-submit">Solicitar orçamento pelo WhatsApp <Icon name="arrow" className="h-5 w-5 shrink-0" /></button>
+    <p className="text-center text-xs leading-5 text-slate-500">O WhatsApp abrirá com os dados preenchidos. Basta enviar a mensagem.</p>
+  </form>;
 }

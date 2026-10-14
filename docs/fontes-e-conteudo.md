@@ -44,3 +44,10 @@ Rodapé: Desenvolvido por Struture Studios, com link https://struturestudios.com
 
 ## Ajuste visual solicitado
 Design anterior ao redesenho minimalista restaurado a partir do commit 9a7a613, mantendo dados institucionais corrigidos, ícones, favicon, imagens dos serviços e artigos. Cards e menu por subcategorias voltaram ao formato original, com acesso a Todos os serviços. Portfólio e depoimentos sem comprovação continuam fora da apresentação pública.
+
+## Fotos, galerias e orçamento por WhatsApp
+Foto da equipe fornecida pelo cliente aplicada à apresentação da equipe e à história da empresa, sem alterações de conteúdo. Logo original integral preservado em public/logo-original.png.
+42 imagens em 14 galerias; fontes individuais em docs/gallery-sources.json. Fotos selecionadas do site anterior e imagens ilustrativas identificadas na interface. Três imagens ilustrativas complementares foram geradas pela ferramenta integrada imagegen; prompts no mesmo manifesto.
+Todos os formulários usam Nome Completo, Endereço, Serviço desejado, Tipo de imóvel e Descrição adicional opcional. O envio abre a conversa comercial no WhatsApp com texto formatado; o visitante confirma o envio no aplicativo. Não grava novos leads pelo formulário.
+Data completa de fundação e área de atendimento prioritário retiradas da apresentação. Cards com imagens, contraste reforçado no hero e movimentos reduzidos quando solicitado pelo sistema.
+Validação: build, composição/encoding da mensagem e descrição opcional, 14 galerias com 3 imagens, navegação por setas/miniaturas/teclado, formulário no celular, logo original, ausência de overflow e de erros JavaScript. O teste do WhatsApp interceptou a navegação, sem enviar mensagens.

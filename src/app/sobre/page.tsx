@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     "Conheça a história, missão e equipe da Azultech Engenharia, especialistas em reformas e estruturas metálicas na Zona Sul de São Paulo.",
 };
 
-const stats = [{ num: "2017", label: "Fundação" }, { num: "18x", label: "Parcelamento" }, { num: "SP", label: "Atendimento" }];
+const stats = [{ num: "Sob medida", label: "Projetos" }, { num: "18x", label: "Parcelamento" }, { num: "SP", label: "Atendimento" }];
 
 const areas = company.coverageNeighborhoods;
 
@@ -46,10 +46,10 @@ export default function SobrePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <Image
-                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
-                alt="Imagem ilustrativa de obra"
-                width={800} height={500}
-                className="w-full h-[400px] object-cover rounded-2xl shadow-xl"
+                src="/images/equipe-oficina.webp"
+                alt="Equipe reunida na oficina industrial"
+                width={1396} height={1127}
+                className="w-full h-auto rounded-2xl shadow-xl"
               />
             </div>
             <div>
@@ -58,7 +58,7 @@ export default function SobrePage() {
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed text-base">
                 <p>
-                  A Azultech Engenharia Ltda foi fundada em 8 de agosto de 2017 e atua com estruturas metálicas, vidros e reformas para residências e empresas.
+                  A Azultech Engenharia Ltda atua com estruturas metálicas, vidros e reformas para residências e empresas.
                 </p>
                 <p>
                   Nossa sede fica na Avenida Anacé, 136, Jardim Umarizal, São Paulo – SP. CNPJ 28.366.602/0001-86. Realizamos fabricação, instalação e manutenção conforme a necessidade de cada imóvel.

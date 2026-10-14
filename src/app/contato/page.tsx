@@ -45,7 +45,7 @@ export default function ContatoPage() {
                 Solicite seu <span className="text-orange-400">orçamento grátis</span>
               </h2>
               <p className="text-blue-100 text-base leading-relaxed mb-8">
-                Preencha o formulário e um de nossos especialistas entrará em contato para conversar sobre o projeto.
+                Preencha o formulário e abra o WhatsApp com os dados do projeto prontos para enviar.
               </p>
               <a
                 href="https://wa.me/5511939217592"
@@ -62,7 +62,6 @@ export default function ContatoPage() {
                 <p><strong>Endereço:</strong> {companyInfo?.address ?? "Av. Anacé, 136 — Campo Limpo, Zona Sul, São Paulo/SP"}</p>
                 <p><strong>Horário de Atendimento:</strong> {companyInfo?.workingHours ?? "Segunda a Sexta das 08h às 18h | Sábados das 08h às 13h"}</p>
                 <p><strong>CNPJ:</strong> {company.cnpj}</p>
-                <p><strong>Fundação:</strong> {company.foundedLabel}</p>
                 <p><strong>E-mail:</strong> {companyInfo?.email ?? "contato@azultechengenharia.com.br"}</p>
               </div>
             </div>

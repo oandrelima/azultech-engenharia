@@ -1,0 +1,257 @@
+[
+  {
+    "service": "mezaninos-metalicos",
+    "file": "public/images/galleries/mezaninos-metalicos/1.webp",
+    "source": "https://www.azultechengenharia.com.br/wp-content/uploads/2026/05/mezaninos-1.jpeg",
+    "illustrative": false
+  },
+  {
+    "service": "mezaninos-metalicos",
+    "file": "public/images/galleries/mezaninos-metalicos/2.webp",
+    "source": "https://www.azultechengenharia.com.br/wp-content/uploads/2026/05/mezaninos-2.jpeg",
+    "illustrative": false
+  },
+  {
+    "service": "mezaninos-metalicos",
+    "file": "public/images/galleries/mezaninos-metalicos/3.webp",
+    "source": "https://www.azultechengenharia.com.br/wp-content/uploads/2026/05/mezaninos-3.jpeg",
+    "illustrative": false
+  },
+  {
+    "service": "mezaninos-residenciais",
+    "file": "public/images/galleries/mezaninos-residenciais/1.webp",
+    "source": "https://www.azultechengenharia.com.br/wp-content/uploads/2025/09/mezaninos-3.jpeg",
+    "illustrative": false
+  },
+  {
+    "service": "mezaninos-residenciais",
+    "file": "public/images/galleries/mezaninos-residenciais/2.webp",
+    "source": "https://www.azultechengenharia.com.br/wp-content/uploads/2025/09/mezaninos-2.jpeg",
+    "illustrative": false
+  },
+  {
+    "service": "mezaninos-residenciais",
+    "file": "public/images/galleries/mezaninos-residenciais/3.webp",
+    "source": "https://www.azultechengenharia.com.br/wp-content/uploads/2025/09/mezaninos-6.jpeg",
+    "illustrative": false
+  },
+  {
+    "service": "mezaninos-para-apartamentos",
+    "file": "public/images/galleries/mezaninos-para-apartamentos/1.webp",
+    "source": "https://www.azultechengenharia.com.br/wp-content/uploads/2026/05/banner-apartamento.jpeg",
+    "illustrative": false
+  },
+  {
+    "service": "mezaninos-para-apartamentos",
+    "file": "public/images/galleries/mezaninos-para-apartamentos/2.webp",
+    "source": "https://www.azultechengenharia.com.br/wp-content/uploads/2025/09/mezaninos-4.jpeg",
+    "illustrative": false
+  },
+  {
+    "service": "mezaninos-para-apartamentos",
+    "file": "public/images/galleries/mezaninos-para-apartamentos/3.webp",
+    "source": "https://www.azultechengenharia.com.br/wp-content/uploads/2026/01/mezaninos-azultec-2.jpeg",
+    "illustrative": false
+  },
+  {
+    "service": "cobertura-metalica",
+    "file": "public/images/galleries/cobertura-metalica/1.webp",
+    "source": "https://www.azultechengenharia.com.br/wp-content/uploads/2025/09/coberturas-6.jpeg",
+    "illustrative": false
+  },
+  {
+    "service": "cobertura-metalica",
+    "file": "public/images/galleries/cobertura-metalica/2.webp",
+    "source": "https://www.azultechengenharia.com.br/wp-content/uploads/2026/01/mezaninos-azultec-7.jpeg",
+    "illustrative": false
+  },
+  {
+    "service": "cobertura-metalica",
+    "file": "public/images/galleries/cobertura-metalica/3.webp",
+    "source": "https://www.azultechengenharia.com.br/wp-content/uploads/2025/09/coberturas-1.jpeg",
+    "illustrative": false
+  },
+  {
+    "service": "cobertura-de-vidro",
+    "file": "public/images/galleries/cobertura-de-vidro/1.webp",
+    "source": "https://www.azultechengenharia.com.br/wp-content/uploads/2025/09/coberturas-3.jpeg",
+    "illustrative": false
+  },
+  {
+    "service": "cobertura-de-vidro",
+    "file": "public/images/galleries/cobertura-de-vidro/2.webp",
+    "source": "https://www.azultechengenharia.com.br/wp-content/uploads/2025/09/coberturas-2.jpeg",
+    "illustrative": false
+  },
+  {
+    "service": "cobertura-de-vidro",
+    "file": "public/images/galleries/cobertura-de-vidro/3.webp",
+    "source": "Built-in imagegen hero",
+    "illustrative": true
+  },
+  {
+    "service": "janelas-de-vidro-blindex",
+    "file": "public/images/galleries/janelas-de-vidro-blindex/1.webp",
+    "source": "https://www.azultechengenharia.com.br/wp-content/uploads/2025/09/portas-e-janelas-9.jpeg",
+    "illustrative": false
+  },
+  {
+    "service": "janelas-de-vidro-blindex",
+    "file": "public/images/galleries/janelas-de-vidro-blindex/2.webp",
+    "source": "https://www.azultechengenharia.com.br/wp-content/uploads/2025/09/portas-e-janelas-6.jpeg",
+    "illustrative": false
+  },
+  {
+    "service": "janelas-de-vidro-blindex",
+    "file": "public/images/galleries/janelas-de-vidro-blindex/3.webp",
+    "source": "https://www.azultechengenharia.com.br/wp-content/uploads/2025/09/portas-e-janelas-7.jpeg",
+    "illustrative": false
+  },
+  {
+    "service": "portas-de-vidro-blindex",
+    "file": "public/images/galleries/portas-de-vidro-blindex/1.webp",
+    "source": "https://www.azultechengenharia.com.br/wp-content/uploads/2025/09/portas-e-janelas-2.jpeg",
+    "illustrative": false
+  },
+  {
+    "service": "portas-de-vidro-blindex",
+    "file": "public/images/galleries/portas-de-vidro-blindex/2.webp",
+    "source": "https://www.azultechengenharia.com.br/wp-content/uploads/2025/09/portas-e-janelas-3.jpeg",
+    "illustrative": false
+  },
+  {
+    "service": "portas-de-vidro-blindex",
+    "file": "public/images/galleries/portas-de-vidro-blindex/3.webp",
+    "source": "https://www.azultechengenharia.com.br/wp-content/uploads/2025/09/portas-e-janelas-5.jpeg",
+    "illustrative": false
+  },
+  {
+    "service": "automatizacao-de-portoes",
+    "file": "public/images/galleries/automatizacao-de-portoes/1.webp",
+    "source": "https://www.azultechengenharia.com.br/wp-content/uploads/2025/09/portoes-1.jpeg",
+    "illustrative": false
+  },
+  {
+    "service": "automatizacao-de-portoes",
+    "file": "public/images/galleries/automatizacao-de-portoes/2.webp",
+    "source": "https://www.azultechengenharia.com.br/wp-content/uploads/2025/09/portoes-2.jpeg",
+    "illustrative": false
+  },
+  {
+    "service": "automatizacao-de-portoes",
+    "file": "public/images/galleries/automatizacao-de-portoes/3.webp",
+    "source": "Built-in imagegen hero",
+    "illustrative": true
+  },
+  {
+    "service": "reforma-de-portoes-de-aluminio",
+    "file": "public/images/galleries/reforma-de-portoes-de-aluminio/1.webp",
+    "source": "https://www.azultechengenharia.com.br/wp-content/uploads/2025/09/portoes-2.jpeg",
+    "illustrative": false
+  },
+  {
+    "service": "reforma-de-portoes-de-aluminio",
+    "file": "public/images/galleries/reforma-de-portoes-de-aluminio/2.webp",
+    "source": "https://www.azultechengenharia.com.br/wp-content/uploads/2025/09/portoes-1.jpeg",
+    "illustrative": false
+  },
+  {
+    "service": "reforma-de-portoes-de-aluminio",
+    "file": "public/images/galleries/reforma-de-portoes-de-aluminio/3.webp",
+    "source": "Built-in imagegen hero",
+    "illustrative": true
+  },
+  {
+    "service": "box-para-banheiro",
+    "file": "public/images/galleries/box-para-banheiro/1.webp",
+    "source": "https://www.azultechengenharia.com.br/wp-content/uploads/2025/09/box-5.jpeg",
+    "illustrative": false
+  },
+  {
+    "service": "box-para-banheiro",
+    "file": "public/images/galleries/box-para-banheiro/2.webp",
+    "source": "https://www.azultechengenharia.com.br/wp-content/uploads/2025/09/box-1.jpeg",
+    "illustrative": false
+  },
+  {
+    "service": "box-para-banheiro",
+    "file": "public/images/galleries/box-para-banheiro/3.webp",
+    "source": "https://www.azultechengenharia.com.br/wp-content/uploads/2025/09/box-2-1.jpeg",
+    "illustrative": false
+  },
+  {
+    "service": "fechamento-de-sacadas",
+    "file": "public/images/galleries/fechamento-de-sacadas/1.webp",
+    "source": "https://www.azultechengenharia.com.br/wp-content/uploads/2025/09/fechamento-de-varanda-com-norma-abnt.webp",
+    "illustrative": false
+  },
+  {
+    "service": "fechamento-de-sacadas",
+    "file": "public/images/galleries/fechamento-de-sacadas/2.webp",
+    "source": "Built-in imagegen hero",
+    "illustrative": true
+  },
+  {
+    "service": "servico-de-eletrica",
+    "file": "public/images/galleries/servico-de-eletrica/1.webp",
+    "source": "https://www.azultechengenharia.com.br/wp-content/uploads/2025/09/emmanuel-ikwuegbu-_2AlIm-F6pw-unsplash.jpg",
+    "illustrative": false
+  },
+  {
+    "service": "servico-de-eletrica",
+    "file": "public/images/galleries/servico-de-eletrica/2.webp",
+    "source": "Built-in imagegen hero",
+    "illustrative": true
+  },
+  {
+    "service": "servicos-de-hidraulica",
+    "file": "public/images/galleries/servicos-de-hidraulica/1.webp",
+    "source": "https://www.azultechengenharia.com.br/wp-content/uploads/2025/09/marian-florinel-condruz-C-oYJoIfgCs-unsplash.jpg",
+    "illustrative": false
+  },
+  {
+    "service": "servicos-de-hidraulica",
+    "file": "public/images/galleries/servicos-de-hidraulica/2.webp",
+    "source": "Built-in imagegen hero",
+    "illustrative": true
+  },
+  {
+    "service": "forro-de-gesso-e-acabamentos",
+    "file": "public/images/galleries/forro-de-gesso-e-acabamentos/1.webp",
+    "source": "https://www.azultechengenharia.com.br/wp-content/uploads/2025/10/gesso2.jpg",
+    "illustrative": false
+  },
+  {
+    "service": "forro-de-gesso-e-acabamentos",
+    "file": "public/images/galleries/forro-de-gesso-e-acabamentos/2.webp",
+    "source": "https://www.azultechengenharia.com.br/wp-content/uploads/2025/10/gesso.jpg",
+    "illustrative": false
+  },
+  {
+    "service": "forro-de-gesso-e-acabamentos",
+    "file": "public/images/galleries/forro-de-gesso-e-acabamentos/3.webp",
+    "source": "https://www.azultechengenharia.com.br/wp-content/uploads/2025/10/gesso1.jpg",
+    "illustrative": false
+  },
+  {
+    "service": "fechamento-de-sacadas",
+    "file": "public/images/galleries/fechamento-de-sacadas/3.webp",
+    "source": "Built-in imagegen",
+    "illustrative": true,
+    "prompt": "Photorealistic editorial photo, landscape 16:9 for engineering service gallery. A different close perspective of a modern Brazilian apartment balcony with retractable frameless glass panels, panels neatly folded on one side, safe full height enclosure, tiled floor, city skyline. Natural daylight, realistic materials, premium architectural photography, no text or logos. Clearly illustrative service concept, not an actual company project."
+  },
+  {
+    "service": "servico-de-eletrica",
+    "file": "public/images/galleries/servico-de-eletrica/3.webp",
+    "source": "Built-in imagegen",
+    "illustrative": true,
+    "prompt": "Photorealistic editorial photo, landscape 16:9 for engineering service gallery. Professional electrician wearing protective gloves and safety glasses working on a disconnected residential electrical panel, organized tools nearby, no sparks, no live contact, realistic Brazilian home renovation. Natural daylight, realistic materials, premium architectural photography, no text or logos. Clearly illustrative service concept, not an actual company project."
+  },
+  {
+    "service": "servicos-de-hidraulica",
+    "file": "public/images/galleries/servicos-de-hidraulica/3.webp",
+    "source": "Built-in imagegen",
+    "illustrative": true,
+    "prompt": "Photorealistic editorial photo, landscape 16:9 for engineering service gallery. Close view of a professionally installed residential under sink water supply with shutoff valves and neat plumbing fittings, clean neutral bathroom cabinet, no brand labels. Natural daylight, realistic materials, premium architectural photography, no text or logos. Clearly illustrative service concept, not an actual company project."
+  }
+]

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ServiceCard } from "~/components/ServiceCard";
 import { serviceCatalog } from "~/lib/services";
 import type { Metadata } from "next";
 
@@ -47,19 +48,7 @@ export default function ServicosPage() {
               <p className="text-gray-600 text-sm sm:text-base mb-8 max-w-3xl">{category.description}</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {category.services.map((service) => (
-                  <Link
-                    key={service.id}
-                    href={`/servicos/${service.slug}`}
-                    className="group bg-white rounded-xl p-6 shadow-sm hover:shadow-md border border-gray-100 hover:border-orange-200 transition-all duration-300 hover:-translate-y-1"
-                  >
-                    <h3 className="font-head font-bold text-gray-900 text-lg mb-2 group-hover:text-orange-500 transition-colors">
-                      {service.title}
-                    </h3>
-                    <p className="text-gray-500 text-sm leading-relaxed mb-4">{service.shortDescription}</p>
-                    <div className="flex items-center gap-1 text-orange-500 text-xs font-bold uppercase tracking-wider">
-                      Ver detalhes <span className="transition-transform group-hover:translate-x-1">→</span>
-                    </div>
-                  </Link>
+                  <ServiceCard key={service.id} service={service} />
                 ))}
               </div>
             </div>

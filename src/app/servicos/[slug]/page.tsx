@@ -3,6 +3,8 @@ import { serviceCatalog } from "~/lib/services";
 import { company } from "~/lib/company";
 import { Icon } from "~/components/Icon";
 
+import galleries from "~/lib/galleries.json";
+import { ServiceGallery } from "~/components/ServiceGallery";
 import { LeadForm } from "~/components/LeadForm";
 import { ScrollReveal } from "~/components/ScrollReveal";
 import type { Metadata, ResolvingMetadata } from "next";
@@ -110,6 +112,8 @@ export default async function ServicePage({ params }: Props) {
                 </div>
               </ScrollReveal>
 
+              <ScrollReveal direction="up"><ServiceGallery title={service.title} images={galleries[slug as keyof typeof galleries]} /></ScrollReveal>
+
               {/* Advantages / Benefits */}
               {service.benefits.length > 0 && (
                 <ScrollReveal direction="up" delay={100}>
@@ -143,27 +147,6 @@ export default async function ServicePage({ params }: Props) {
                 </ScrollReveal>
               )}
 
-              {/* Target Neighborhoods */}
-              {service.targetNeighborhoods.length > 0 && (
-                <ScrollReveal direction="up" delay={200}>
-                  <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow border border-gray-100">
-                    <h3 className="font-head text-lg font-bold text-gray-900 mb-3">
-                      Regiões com Atendimento Prioritário
-                    </h3>
-                    <div className="flex flex-wrap gap-2">
-                      {service.targetNeighborhoods.map((neighborhood) => (
-                        <span
-                          key={neighborhood}
-                          className="bg-blue-50 border border-blue-100 hover:border-orange-300 hover:text-orange-600 text-[#0c3561] text-xs font-semibold px-3 py-1.5 rounded-lg transition-colors cursor-default"
-                        >
-                          {neighborhood}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </ScrollReveal>
-              )}
-
               {/* Related Services */}
               {service.relatedServices.length > 0 && (
                 <ScrollReveal direction="up" delay={250}>
@@ -191,14 +174,14 @@ export default async function ServicePage({ params }: Props) {
             </div>
 
             {/* Right Column: Sticky Budget Form Sidebar */}
-            <div className="lg:col-span-1 sticky top-24">
+            <div className="lg:col-span-1 lg:sticky lg:top-28">
               <ScrollReveal direction="left" delay={100}>
-                <div className="bg-[#0c3561] rounded-2xl p-6 shadow-xl text-white mb-6">
+                <div className="bg-[#0c3561] rounded-2xl p-4 sm:p-6 shadow-xl text-white mb-6">
                   <h3 className="font-head text-2xl font-black mb-2">
                     Solicite seu Orçamento
                   </h3>
                   <p className="text-blue-100 text-sm mb-6 leading-relaxed">
-                    Preencha os dados abaixo para receber uma proposta rápida sem compromisso.
+                    Envie os detalhes do projeto diretamente pelo WhatsApp.
                   </p>
                   <LeadForm defaultService={service.title} />
                 </div>
