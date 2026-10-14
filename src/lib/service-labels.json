@@ -1,0 +1,72 @@
+{
+  "mezaninos-metalicos": {
+    "title": "Mezaninos Metálicos",
+    "category": "Mezaninos",
+    "categorySlug": "mezaninos"
+  },
+  "mezaninos-residenciais": {
+    "title": "Mezaninos Residenciais",
+    "category": "Mezaninos",
+    "categorySlug": "mezaninos"
+  },
+  "mezaninos-para-apartamentos": {
+    "title": "Mezaninos para Apartamentos",
+    "category": "Mezaninos",
+    "categorySlug": "mezaninos"
+  },
+  "cobertura-metalica": {
+    "title": "Cobertura Metálica",
+    "category": "Coberturas sob Medida",
+    "categorySlug": "coberturas-sob-medida"
+  },
+  "cobertura-de-vidro": {
+    "title": "Cobertura de Vidro",
+    "category": "Coberturas sob Medida",
+    "categorySlug": "coberturas-sob-medida"
+  },
+  "janelas-de-vidro-blindex": {
+    "title": "Janelas de Vidro Blindex",
+    "category": "Esquadrias Blindex",
+    "categorySlug": "esquadrias-blindex"
+  },
+  "portas-de-vidro-blindex": {
+    "title": "Portas de Vidro Blindex",
+    "category": "Esquadrias Blindex",
+    "categorySlug": "esquadrias-blindex"
+  },
+  "automatizacao-de-portoes": {
+    "title": "Automatização de Portões",
+    "category": "Portões & Automatização",
+    "categorySlug": "portoes-e-automatizacao"
+  },
+  "reforma-de-portoes-de-aluminio": {
+    "title": "Reforma de Portões de Alumínio",
+    "category": "Portões & Automatização",
+    "categorySlug": "portoes-e-automatizacao"
+  },
+  "box-para-banheiro": {
+    "title": "Box para Banheiro",
+    "category": "Vidraçaria & Ambientes",
+    "categorySlug": "vidracaria-e-ambientes"
+  },
+  "fechamento-de-sacadas": {
+    "title": "Fechamento de Área e Sacadas",
+    "category": "Vidraçaria & Ambientes",
+    "categorySlug": "vidracaria-e-ambientes"
+  },
+  "servico-de-eletrica": {
+    "title": "Serviço de Elétrica",
+    "category": "Reformas e Acabamentos",
+    "categorySlug": "reformas-e-acabamentos"
+  },
+  "servicos-de-hidraulica": {
+    "title": "Serviços de Hidráulica",
+    "category": "Reformas e Acabamentos",
+    "categorySlug": "reformas-e-acabamentos"
+  },
+  "forro-de-gesso-e-acabamentos": {
+    "title": "Forro de Gesso e Acabamentos em Alvenaria",
+    "category": "Reformas e Acabamentos",
+    "categorySlug": "reformas-e-acabamentos"
+  }
+}

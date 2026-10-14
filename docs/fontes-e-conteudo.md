@@ -41,3 +41,6 @@ Os artigos são novos textos editoriais com fontes indicadas na própria página
 O símbolo original é usado no cabeçalho com um wordmark legível; favicon próprio substitui a identidade do template.
 Portfólio removido dos menus; a URL antiga redireciona para serviços.
 Rodapé: Desenvolvido por Struture Studios, com link https://struturestudios.com/.
+
+## Ajuste visual solicitado
+Design anterior ao redesenho minimalista restaurado a partir do commit 9a7a613, mantendo dados institucionais corrigidos, ícones, favicon, imagens dos serviços e artigos. Cards e menu por subcategorias voltaram ao formato original, com acesso a Todos os serviços. Portfólio e depoimentos sem comprovação continuam fora da apresentação pública.

@@ -49,7 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <TRPCReactProvider>
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema).replace(/</g, "\u003c") }} />
           <Navbar />
-          <main className="pt-[80px]">{children}</main>
+          <main className="pt-[72px]">{children}</main>
           <Footer />
           <WhatsAppFloat />
         </TRPCReactProvider>

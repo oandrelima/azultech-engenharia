@@ -1,37 +1,323 @@
-﻿"use client";
+"use client";
+
 import Link from "next/link";
-import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
 import { Brand } from "./Brand";
-import { Icon } from "./Icon";
-import { serviceCatalog } from "~/lib/services";
+import { useState, useEffect } from "react";
+
+const mezaninoSubItems = [
+  { label: "Mezaninos Metálicos", href: "/servicos/mezaninos-metalicos" },
+  { label: "Mezaninos Residenciais", href: "/servicos/mezaninos-residenciais" },
+  { label: "Mezaninos p/ Apartamentos", href: "/servicos/mezaninos-para-apartamentos" },
+];
+
+const coberturaSubItems = [
+  { label: "Cobertura Metálica", href: "/servicos/cobertura-metalica" },
+  { label: "Cobertura de Vidro", href: "/servicos/cobertura-de-vidro" },
+];
+
+const portoesSubItems = [
+  { label: "Automatização de Portões", href: "/servicos/automatizacao-de-portoes" },
+  { label: "Reforma de Portões", href: "/servicos/reforma-de-portoes-de-aluminio" },
+  { label: "Portas de Vidro Blindex", href: "/servicos/portas-de-vidro-blindex" },
+];
+
+const outrosSubItems = [
+  { label: "Janelas Blindex", href: "/servicos/janelas-de-vidro-blindex" },
+  { label: "Box para Banheiro", href: "/servicos/box-para-banheiro" },
+  { label: "Fechamento de Sacadas", href: "/servicos/fechamento-de-sacadas" },
+  { label: "Elétrica", href: "/servicos/servico-de-eletrica" },
+  { label: "Hidráulica", href: "/servicos/servicos-de-hidraulica" },
+  { label: "Forro de Gesso", href: "/servicos/forro-de-gesso-e-acabamentos" },
+];
+
+type ServiceItem =
+  | { label: string; href: string; subItems?: undefined }
+  | { label: string; href: string; subItems: { label: string; href: string }[] };
+
+const services: ServiceItem[] = [
+  { label: "Mezaninos", href: "/servicos/mezaninos-metalicos", subItems: mezaninoSubItems },
+  { label: "Cobertura", href: "/servicos/cobertura-metalica", subItems: coberturaSubItems },
+  { label: "Portões e Portas", href: "/servicos/automatizacao-de-portoes", subItems: portoesSubItems },
+  { label: "Outros", href: "/servicos", subItems: outrosSubItems },
+];
+
 export function Navbar() {
-  const [open, setOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const pathname = usePathname();
-  useEffect(() => { setOpen(false); setServicesOpen(false); }, [pathname]);
-  return <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#0c3561]">
-    <div className="container flex h-[80px] items-center justify-between gap-6">
-      <Brand />
-      <nav aria-label="Navegação principal" className="hidden lg:flex items-center gap-8 text-sm text-white/80">
-        <Link href="/" aria-current={pathname === "/" ? "page" : undefined}>Início</Link>
-        <Link href="/sobre" aria-current={pathname === "/sobre" ? "page" : undefined}>Sobre</Link>
-        <div className="relative">
-          <button onClick={() => setServicesOpen(!servicesOpen)} aria-expanded={servicesOpen} aria-controls="desktop-services" className="flex items-center gap-2">Serviços <Icon name="chevron" className="h-3 w-3" /></button>
-          {servicesOpen && <><button className="fixed inset-0 cursor-default" aria-label="Fechar serviços" onClick={() => setServicesOpen(false)} /><div id="desktop-services" className="absolute top-10 -left-40 grid w-[600px] grid-cols-2 gap-1 rounded-lg border border-gray-200 bg-white p-4 text-gray-700 shadow-lg">
-            <Link className="col-span-2 border-b border-gray-100 p-2 font-semibold" href="/servicos">Todos os serviços</Link>
-            {serviceCatalog.map(s => <Link key={s.slug} href={`/servicos/${s.slug}`} className="rounded p-2 text-sm hover:bg-gray-50 hover:text-orange-600">{s.title}</Link>)}
-          </div></>}
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [mobileMezaOpen, setMobileMezaOpen] = useState(false);
+  const [mobileCobOpen, setMobileCobOpen] = useState(false);
+  const [mobilePrtOpen, setMobilePrtOpen] = useState(false);
+  const [mobileOutrosOpen, setMobileOutrosOpen] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 48);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return (
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 py-3 bg-[#0c3561] transition-all duration-300 ${
+        scrolled ? "shadow-lg" : ""
+      }`}
+    >
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between">
+          {/* Logo with hover effect */}
+          <Brand />
+
+          {/* Desktop Nav */}
+          <nav className="hidden lg:flex items-center gap-1">
+            <Link href="/" className="px-3 py-2 text-white/90 hover:text-white font-medium text-sm transition-colors">
+              Início
+            </Link>
+            <Link href="/sobre" className="px-3 py-2 text-white/90 hover:text-white font-medium text-sm transition-colors">
+              Sobre
+            </Link>
+
+            {/* Services Dropdown */}
+            <div className="relative group py-2">
+              <button className="flex items-center gap-1 px-3 py-1 text-white/90 group-hover:text-white font-medium text-sm transition-colors">
+                Serviços
+                <svg
+                  className="w-3.5 h-3.5 transition-transform group-hover:rotate-180"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              <div className="absolute top-full left-0 w-72 bg-white rounded-xl shadow-2xl border border-gray-100 py-2 hidden group-hover:block group-focus-within:block z-50">
+                <Link href="/servicos" className="block mx-2 mb-2 px-3 py-2.5 rounded-lg bg-orange-50 text-orange-600 text-sm font-bold hover:bg-orange-100">Todos os serviços →</Link>
+                {services.map((s, i) => (
+                  s.subItems ? (
+                    <div key={s.href} className="relative group/sub">
+                      <div tabIndex={0} className="flex items-center justify-between px-4 py-2.5 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors cursor-pointer">
+                        <span className="font-semibold flex items-center gap-2">
+                          <span className="w-1.5 h-1.5 rounded-full bg-orange-400 inline-block"></span>
+                          {s.label}
+                        </span>
+                        <svg className="w-3.5 h-3.5 text-gray-400 group-hover/sub:text-orange-500 transition-all group-hover/sub:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                      </div>
+                      <div className="absolute left-full top-0 w-60 bg-white rounded-xl shadow-2xl border border-gray-100 py-2 hidden group-hover/sub:block group-focus-within/sub:block z-50 pl-1">
+                        {s.subItems.map((sub) => (
+                          <Link key={sub.href} href={sub.href}
+                            className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">
+                            {sub.label}
+                          </Link>
+                        ))}
+                      </div>
+                      {i < services.length - 1 && !services[i + 1]?.subItems && (
+                        <div className="mx-4 my-1 border-t border-gray-100" />
+                      )}
+                    </div>
+                  ) : (
+                    <Link key={s.href} href={s.href}
+                      className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">
+                      {s.label}
+                    </Link>
+                  )
+                ))}
+              </div>
+            </div>
+            <Link href="/blog" className="px-3 py-2 text-white/90 hover:text-white font-medium text-sm transition-colors">
+              Dicas
+            </Link>
+            <Link href="/contato" className="px-3 py-2 text-white/90 hover:text-white font-medium text-sm transition-colors">
+              Contato
+            </Link>
+          </nav>
+
+          {/* CTA + Hamburger */}
+          <div className="flex items-center gap-3">
+            <a
+              href="https://wa.me/5511939217592?text=Olá! Gostaria de solicitar um orçamento."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg font-semibold text-sm transition-colors"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326z" />
+              </svg>
+              WhatsApp
+            </a>
+
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="lg:hidden flex flex-col gap-1.5 p-2"
+              aria-label="Menu"
+            >
+              <span className={`block w-6 h-0.5 bg-white transition-all ${mobileOpen ? "rotate-45 translate-y-2" : ""}`}></span>
+              <span className={`block w-6 h-0.5 bg-white transition-all ${mobileOpen ? "opacity-0" : ""}`}></span>
+              <span className={`block w-6 h-0.5 bg-white transition-all ${mobileOpen ? "-rotate-45 -translate-y-2" : ""}`}></span>
+            </button>
+          </div>
         </div>
-        <Link href="/blog" aria-current={pathname.startsWith("/blog") ? "page" : undefined}>Dicas</Link>
-        <Link href="/contato" aria-current={pathname === "/contato" ? "page" : undefined}>Contato</Link>
-      </nav>
-      <Link href="/contato" className="hidden sm:inline-flex items-center gap-3 rounded bg-orange-500 px-5 py-3 text-sm font-semibold text-white hover:bg-orange-600">Solicitar orçamento <Icon name="arrow" className="h-4 w-4" /></Link>
-      <button className="lg:hidden p-2 text-white" onClick={() => setOpen(!open)} aria-label={open ? "Fechar menu" : "Abrir menu"} aria-expanded={open} aria-controls="mobile-menu"><Icon name={open ? "close" : "menu"} /></button>
-    </div>
-    {open && <nav id="mobile-menu" aria-label="Navegação móvel" className="container max-h-[calc(100dvh-80px)] overflow-auto border-t border-white/10 pb-6 text-sm text-white">
-      {([['/', 'Início'], ['/sobre', 'Sobre'], ['/servicos', 'Todos os serviços'], ['/blog', 'Dicas'], ['/contato', 'Contato']] as const).map(([href,label]) => <Link key={href} href={href} className="block border-b border-white/10 py-3">{label}</Link>)}
-      <details className="py-3"><summary className="cursor-pointer">Escolha um serviço</summary><div className="mt-3 grid gap-3 pl-3">{serviceCatalog.map(s => <Link key={s.slug} href={`/servicos/${s.slug}`} className="text-white/75">{s.title}</Link>)}</div></details>
-    </nav>}
-  </header>;
+
+        {/* Mobile Menu */}
+        {mobileOpen && (
+          <nav className="lg:hidden pt-4 pb-2 border-t border-white/20 mt-3 max-h-[80vh] overflow-y-auto">
+            <div className="flex flex-col gap-1">
+              {[
+                { href: "/", label: "Início" },
+                { href: "/sobre", label: "Sobre" },
+              ].map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setMobileOpen(false)}
+                  className="px-3 py-2 text-white/90 hover:text-white text-sm font-medium rounded-md hover:bg-white/10 transition-colors"
+                >
+                  {item.label}
+                </Link>
+              ))}
+
+              <Link href="/servicos" onClick={() => setMobileOpen(false)} className="px-3 py-2 text-orange-300 text-sm font-semibold">Todos os serviços →</Link>
+              {/* Mobile Services accordion */}
+              <button
+                onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                className="flex items-center justify-between px-3 py-2 text-white/90 hover:text-white text-sm font-medium rounded-md hover:bg-white/10 transition-colors text-left"
+              >
+                Serviços
+                <svg
+                  className={`w-4 h-4 transition-transform ${mobileServicesOpen ? "rotate-180" : ""}`}
+                  fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              {mobileServicesOpen && (
+                <div className="ml-4 flex flex-col gap-1 border-l border-white/20 pl-3">
+                  {/* Mezaninos */}
+                  <button onClick={() => setMobileMezaOpen(!mobileMezaOpen)}
+                    className="flex items-center justify-between px-2 py-1.5 text-white/80 hover:text-white text-sm font-semibold rounded-md hover:bg-white/10 transition-colors text-left">
+                    <span className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-orange-400 inline-block"></span>
+                      Mezaninos
+                    </span>
+                    <svg className={`w-3.5 h-3.5 transition-transform ${mobileMezaOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  {mobileMezaOpen && (
+                    <div className="ml-4 flex flex-col gap-1 border-l border-white/10 pl-3">
+                      {mezaninoSubItems.map((sub) => (
+                        <Link key={sub.href} href={sub.href} onClick={() => setMobileOpen(false)}
+                          className="px-2 py-1.5 text-white/70 hover:text-white text-xs font-medium rounded-md hover:bg-white/10 transition-colors">
+                          {sub.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Cobertura */}
+                  <button onClick={() => setMobileCobOpen(!mobileCobOpen)}
+                    className="flex items-center justify-between px-2 py-1.5 text-white/80 hover:text-white text-sm font-semibold rounded-md hover:bg-white/10 transition-colors text-left">
+                    <span className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-orange-400 inline-block"></span>
+                      Cobertura
+                    </span>
+                    <svg className={`w-3.5 h-3.5 transition-transform ${mobileCobOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  {mobileCobOpen && (
+                    <div className="ml-4 flex flex-col gap-1 border-l border-white/10 pl-3">
+                      {coberturaSubItems.map((sub) => (
+                        <Link key={sub.href} href={sub.href} onClick={() => setMobileOpen(false)}
+                          className="px-2 py-1.5 text-white/70 hover:text-white text-xs font-medium rounded-md hover:bg-white/10 transition-colors">
+                          {sub.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Portões e Portas */}
+                  <button onClick={() => setMobilePrtOpen(!mobilePrtOpen)}
+                    className="flex items-center justify-between px-2 py-1.5 text-white/80 hover:text-white text-sm font-semibold rounded-md hover:bg-white/10 transition-colors text-left">
+                    <span className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-orange-400 inline-block"></span>
+                      Portões e Portas
+                    </span>
+                    <svg className={`w-3.5 h-3.5 transition-transform ${mobilePrtOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  {mobilePrtOpen && (
+                    <div className="ml-4 flex flex-col gap-1 border-l border-white/10 pl-3">
+                      {portoesSubItems.map((sub) => (
+                        <Link key={sub.href} href={sub.href} onClick={() => setMobileOpen(false)}
+                          className="px-2 py-1.5 text-white/70 hover:text-white text-xs font-medium rounded-md hover:bg-white/10 transition-colors">
+                          {sub.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Outros */}
+                  <button onClick={() => setMobileOutrosOpen(!mobileOutrosOpen)}
+                    className="flex items-center justify-between px-2 py-1.5 text-white/80 hover:text-white text-sm font-semibold rounded-md hover:bg-white/10 transition-colors text-left">
+                    <span className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-orange-400 inline-block"></span>
+                      Outros
+                    </span>
+                    <svg className={`w-3.5 h-3.5 transition-transform ${mobileOutrosOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  {mobileOutrosOpen && (
+                    <div className="ml-4 flex flex-col gap-1 border-l border-white/10 pl-3">
+                      {outrosSubItems.map((sub) => (
+                        <Link key={sub.href} href={sub.href} onClick={() => setMobileOpen(false)}
+                          className="px-2 py-1.5 text-white/70 hover:text-white text-xs font-medium rounded-md hover:bg-white/10 transition-colors">
+                          {sub.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Plain items if any */}
+                  {services.filter(s => !s.subItems).map((s) => (
+                    <Link key={s.href} href={s.href} onClick={() => setMobileOpen(false)}
+                      className="px-2 py-1.5 text-white/80 hover:text-white text-sm font-medium rounded-md hover:bg-white/10 transition-colors">
+                      {s.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+
+              {[
+                { href: "/blog", label: "Dicas" },
+                { href: "/contato", label: "Contato" },
+              ].map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setMobileOpen(false)}
+                  className="px-3 py-2 text-white/90 hover:text-white text-sm font-medium rounded-md hover:bg-white/10 transition-colors"
+                >
+                  {item.label}
+                </Link>
+              ))}
+
+              <a
+                href="https://wa.me/5511939217592"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 flex items-center justify-center gap-2 bg-orange-500 text-white px-4 py-2.5 rounded-lg font-semibold text-sm"
+              >
+                WhatsApp
+              </a>
+            </div>
+          </nav>
+        )}
+      </div>
+    </header>
+  );
 }
