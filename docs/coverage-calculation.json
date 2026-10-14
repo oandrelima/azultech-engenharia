@@ -1,0 +1,491 @@
+{
+  "center": [
+    -23.618166,
+    -46.7571253
+  ],
+  "method": "Haversine; WGS84 locality reference points; straight-line distance, not road distance",
+  "locations": [
+    {
+      "name": "Campo Limpo",
+      "query": "Campo Limpo, São Paulo, Brasil",
+      "center": [
+        -23.6361999,
+        -46.7627968
+      ],
+      "km": 2.0868557371680074,
+      "source": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&countrycodes=br&viewbox=-47.3,-23.3,-46.2,-24&bounded=1&q=Campo%20Limpo%2C%20S%C3%A3o%20Paulo%2C%20Brasil",
+      "osmType": "relation",
+      "osmId": 3032203,
+      "displayName": "Campo Limpo, São Paulo, Região Sudeste, Brasil",
+      "boundingbox": [
+        "-23.6564676",
+        "-23.6087189",
+        "-46.7928097",
+        "-46.7414171"
+      ]
+    },
+    {
+      "name": "Taboão da Serra",
+      "query": "Taboão da Serra, São Paulo, Brasil",
+      "center": [
+        -23.6121912,
+        -46.7790539
+      ],
+      "km": 2.330842345980535,
+      "source": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&countrycodes=br&viewbox=-47.3,-23.3,-46.2,-24&bounded=1&q=Tabo%C3%A3o%20da%20Serra%2C%20S%C3%A3o%20Paulo%2C%20Brasil",
+      "osmType": "relation",
+      "osmId": 298389,
+      "displayName": "Taboão da Serra, São Paulo, Região Sudeste, Brasil",
+      "boundingbox": [
+        "-23.6471775",
+        "-23.5949266",
+        "-46.8216250",
+        "-46.7492444"
+      ]
+    },
+    {
+      "name": "Itapecerica da Serra",
+      "query": "Itapecerica da Serra, São Paulo, Brasil",
+      "center": [
+        -23.7176303,
+        -46.8492435
+      ],
+      "km": 14.502916751447525,
+      "source": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&countrycodes=br&viewbox=-47.3,-23.3,-46.2,-24&bounded=1&q=Itapecerica%20da%20Serra%2C%20S%C3%A3o%20Paulo%2C%20Brasil",
+      "osmType": "relation",
+      "osmId": 5683133,
+      "displayName": "Itapecerica da Serra, São Paulo, Região Sudeste, Brasil",
+      "boundingbox": [
+        "-23.8047211",
+        "-23.6679263",
+        "-46.9378927",
+        "-46.7687398"
+      ]
+    },
+    {
+      "name": "Morumbi",
+      "query": "Morumbi, São Paulo, Brasil",
+      "center": [
+        -23.5974288,
+        -46.7067746
+      ],
+      "km": 5.624564453673795,
+      "source": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&countrycodes=br&viewbox=-47.3,-23.3,-46.2,-24&bounded=1&q=Morumbi%2C%20S%C3%A3o%20Paulo%2C%20Brasil",
+      "osmType": "relation",
+      "osmId": 3049162,
+      "displayName": "Morumbi, São Paulo, Região Sudeste, Brasil",
+      "boundingbox": [
+        "-23.6199242",
+        "-23.5722240",
+        "-46.7279409",
+        "-46.6915182"
+      ]
+    },
+    {
+      "name": "Butantã",
+      "query": "Butantã, São Paulo, Brasil",
+      "center": [
+        -23.5693582,
+        -46.7278225
+      ],
+      "km": 6.194365296290257,
+      "source": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&countrycodes=br&viewbox=-47.3,-23.3,-46.2,-24&bounded=1&q=Butant%C3%A3%2C%20S%C3%A3o%20Paulo%2C%20Brasil",
+      "osmType": "relation",
+      "osmId": 3049349,
+      "displayName": "Butantã, São Paulo, Região Sudeste, Brasil",
+      "boundingbox": [
+        "-23.5899210",
+        "-23.5482989",
+        "-46.7570460",
+        "-46.7009822"
+      ]
+    },
+    {
+      "name": "Lapa",
+      "query": "Lapa, São Paulo, Brasil",
+      "center": [
+        -23.5215756,
+        -46.7043491
+      ],
+      "km": 12.011973406352856,
+      "source": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&countrycodes=br&viewbox=-47.3,-23.3,-46.2,-24&bounded=1&q=Lapa%2C%20S%C3%A3o%20Paulo%2C%20Brasil",
+      "osmType": "relation",
+      "osmId": 3049357,
+      "displayName": "Lapa, São Paulo, Região Sudeste, Brasil",
+      "boundingbox": [
+        "-23.5410280",
+        "-23.5079470",
+        "-46.7262422",
+        "-46.6852830"
+      ]
+    },
+    {
+      "name": "Vila Leopoldina",
+      "query": "Vila Leopoldina, São Paulo, Brasil",
+      "center": [
+        -23.5275027,
+        -46.732947
+      ],
+      "km": 10.37808499391588,
+      "source": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&countrycodes=br&viewbox=-47.3,-23.3,-46.2,-24&bounded=1&q=Vila%20Leopoldina%2C%20S%C3%A3o%20Paulo%2C%20Brasil",
+      "osmType": "relation",
+      "osmId": 3049368,
+      "displayName": "Vila Leopoldina, São Paulo, Região Sudeste, Brasil",
+      "boundingbox": [
+        "-23.5457406",
+        "-23.5146778",
+        "-46.7518723",
+        "-46.7191320"
+      ]
+    },
+    {
+      "name": "Osasco",
+      "query": "Osasco, São Paulo, Brasil",
+      "center": [
+        -23.5324859,
+        -46.7916801
+      ],
+      "km": 10.157223842790762,
+      "source": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&countrycodes=br&viewbox=-47.3,-23.3,-46.2,-24&bounded=1&q=Osasco%2C%20S%C3%A3o%20Paulo%2C%20Brasil",
+      "osmType": "relation",
+      "osmId": 298470,
+      "displayName": "Osasco, São Paulo, Região Sudeste, Brasil",
+      "boundingbox": [
+        "-23.6090912",
+        "-23.4613543",
+        "-46.8218270",
+        "-46.7470450"
+      ]
+    },
+    {
+      "name": "Cotia",
+      "query": "Cotia, São Paulo, Brasil",
+      "center": [
+        -23.603889,
+        -46.918889
+      ],
+      "km": 16.557787038547204,
+      "source": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&countrycodes=br&viewbox=-47.3,-23.3,-46.2,-24&bounded=1&q=Cotia%2C%20S%C3%A3o%20Paulo%2C%20Brasil",
+      "osmType": "relation",
+      "osmId": 298252,
+      "displayName": "Cotia, São Paulo, Região Sudeste, Brasil",
+      "boundingbox": [
+        "-23.8020000",
+        "-23.5630570",
+        "-47.0855821",
+        "-46.8088063"
+      ]
+    },
+    {
+      "name": "Granja Viana",
+      "query": "Granja Viana, Cotia, São Paulo, Brasil",
+      "center": [
+        -23.589171,
+        -46.8306397
+      ],
+      "km": 8.15492892030826,
+      "source": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&countrycodes=br&viewbox=-47.3,-23.3,-46.2,-24&bounded=1&q=Granja%20Viana%2C%20Cotia%2C%20S%C3%A3o%20Paulo%2C%20Brasil",
+      "osmType": "node",
+      "osmId": 12053009478,
+      "displayName": "Granja Viana, Cotia, São Paulo, Região Sudeste, 06710-700, Brasil",
+      "boundingbox": [
+        "-23.6091710",
+        "-23.5691710",
+        "-46.8506397",
+        "-46.8106397"
+      ]
+    },
+    {
+      "name": "Capão Redondo",
+      "query": "Capão Redondo, São Paulo, Brasil",
+      "center": [
+        -23.6719026,
+        -46.7794354
+      ],
+      "km": 6.392787617869493,
+      "source": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&countrycodes=br&viewbox=-47.3,-23.3,-46.2,-24&bounded=1&q=Cap%C3%A3o%20Redondo%2C%20S%C3%A3o%20Paulo%2C%20Brasil",
+      "osmType": "relation",
+      "osmId": 4484407,
+      "displayName": "Capão Redondo, São Paulo, Região Sudeste, Brasil",
+      "boundingbox": [
+        "-23.6967190",
+        "-23.6471434",
+        "-46.8018945",
+        "-46.7526980"
+      ]
+    },
+    {
+      "name": "Santo Amaro",
+      "query": "Santo Amaro, São Paulo, Brasil",
+      "center": [
+        -23.6424673,
+        -46.6998932
+      ],
+      "km": 6.426063356794172,
+      "source": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&countrycodes=br&viewbox=-47.3,-23.3,-46.2,-24&bounded=1&q=Santo%20Amaro%2C%20S%C3%A3o%20Paulo%2C%20Brasil",
+      "osmType": "relation",
+      "osmId": 1692136,
+      "displayName": "Santo Amaro, São Paulo, Região Sudeste, Brasil",
+      "boundingbox": [
+        "-23.6650963",
+        "-23.6199242",
+        "-46.7264386",
+        "-46.6725869"
+      ]
+    },
+    {
+      "name": "Brooklin",
+      "query": "Brooklin Novo, São Paulo, Brasil",
+      "center": [
+        -23.6214866,
+        -46.6883182
+      ],
+      "km": 7.019748676071204,
+      "source": "https://www.openstreetmap.org/node/3869797160",
+      "osmType": "node",
+      "osmId": 3869797160,
+      "displayName": "Brooklin Novo, Itaim Bibi, São Paulo",
+      "boundingbox": [
+        "-23.6318017",
+        "-23.6218017",
+        "-46.6931279",
+        "-46.6831279"
+      ]
+    },
+    {
+      "name": "Berrini",
+      "query": "Avenida Engenheiro Luís Carlos Berrini, São Paulo, Brasil",
+      "center": [
+        -23.6020399,
+        -46.6916165
+      ],
+      "km": 6.911169756175109,
+      "source": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&countrycodes=br&viewbox=-47.3,-23.3,-46.2,-24&bounded=1&q=Avenida%20Engenheiro%20Lu%C3%ADs%20Carlos%20Berrini%2C%20S%C3%A3o%20Paulo%2C%20Brasil",
+      "osmType": "way",
+      "osmId": 325322859,
+      "displayName": "Avenida Engenheiro Luís Carlos Berrini, Vila Olímpia, Itaim Bibi, São Paulo, Região Sudeste, 04571-010, Brasil",
+      "boundingbox": [
+        "-23.6033116",
+        "-23.6007658",
+        "-46.6920817",
+        "-46.6911576"
+      ]
+    },
+    {
+      "name": "Vila Olímpia",
+      "query": "Vila Olímpia, São Paulo, Brasil",
+      "center": [
+        -23.5940375,
+        -46.6842299
+      ],
+      "km": 7.897052202466867,
+      "source": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&countrycodes=br&viewbox=-47.3,-23.3,-46.2,-24&bounded=1&q=Vila%20Ol%C3%ADmpia%2C%20S%C3%A3o%20Paulo%2C%20Brasil",
+      "osmType": "node",
+      "osmId": 3869769892,
+      "displayName": "Vila Olímpia, Itaim Bibi, São Paulo, Região Sudeste, 04551-010, Brasil",
+      "boundingbox": [
+        "-23.6140375",
+        "-23.5740375",
+        "-46.7042299",
+        "-46.6642299"
+      ]
+    },
+    {
+      "name": "Moema",
+      "query": "Moema, São Paulo, Brasil",
+      "center": [
+        -23.597085,
+        -46.6628884
+      ],
+      "km": 9.883695682109272,
+      "source": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&countrycodes=br&viewbox=-47.3,-23.3,-46.2,-24&bounded=1&q=Moema%2C%20S%C3%A3o%20Paulo%2C%20Brasil",
+      "osmType": "relation",
+      "osmId": 1706557,
+      "displayName": "Moema, São Paulo, Região Sudeste, Brasil",
+      "boundingbox": [
+        "-23.6173841",
+        "-23.5720593",
+        "-46.6766648",
+        "-46.6476714"
+      ]
+    },
+    {
+      "name": "Vila Nova Conceição",
+      "query": "Praça Pereira Coutinho, São Paulo, Brasil",
+      "center": [
+        -23.5935402,
+        -46.6693215
+      ],
+      "km": 9.356036701189955,
+      "source": "https://www.openstreetmap.org/way/126052339",
+      "osmType": "way",
+      "osmId": 126052339,
+      "displayName": "Praça Pereira Coutinho — ponto de referência na Vila Nova Conceição",
+      "boundingbox": [
+        "-23.5919408",
+        "-23.5916884",
+        "-46.6662340",
+        "-46.6660425"
+      ],
+      "neighborhoodEvidence": "https://prefeitura.sp.gov.br/web/vila_mariana/w/noticias/14724"
+    },
+    {
+      "name": "Vila Mariana",
+      "query": "Vila Mariana, São Paulo, Brasil",
+      "center": [
+        -23.5837,
+        -46.6327408
+      ],
+      "km": 13.24081815137188,
+      "source": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&countrycodes=br&viewbox=-47.3,-23.3,-46.2,-24&bounded=1&q=Vila%20Mariana%2C%20S%C3%A3o%20Paulo%2C%20Brasil",
+      "osmType": "relation",
+      "osmId": 3049370,
+      "displayName": "Vila Mariana, São Paulo, Região Sudeste, Brasil",
+      "boundingbox": [
+        "-23.5997367",
+        "-23.5676390",
+        "-46.6536214",
+        "-46.6142130"
+      ]
+    },
+    {
+      "name": "Saúde",
+      "query": "Saúde, São Paulo, Brasil",
+      "center": [
+        -23.615178,
+        -46.6433933
+      ],
+      "km": 11.591997667522934,
+      "source": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&countrycodes=br&viewbox=-47.3,-23.3,-46.2,-24&bounded=1&q=Sa%C3%BAde%2C%20S%C3%A3o%20Paulo%2C%20Brasil",
+      "osmType": "relation",
+      "osmId": 1710682,
+      "displayName": "Saúde, São Paulo, Região Sudeste, Brasil",
+      "boundingbox": [
+        "-23.6318576",
+        "-23.5985493",
+        "-46.6617230",
+        "-46.6238680"
+      ]
+    },
+    {
+      "name": "Paraíso",
+      "query": "Paraíso, São Paulo, Brasil",
+      "center": [
+        -23.5738424,
+        -46.6482539
+      ],
+      "km": 12.139298539192382,
+      "source": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&countrycodes=br&viewbox=-47.3,-23.3,-46.2,-24&bounded=1&q=Para%C3%ADso%2C%20S%C3%A3o%20Paulo%2C%20Brasil",
+      "osmType": "node",
+      "osmId": 1000297670,
+      "displayName": "Paraíso, Vila Mariana, São Paulo, Região Sudeste, 04002-021, Brasil",
+      "boundingbox": [
+        "-23.5938424",
+        "-23.5538424",
+        "-46.6682539",
+        "-46.6282539"
+      ]
+    },
+    {
+      "name": "Ipiranga",
+      "query": "Ipiranga, São Paulo, Brasil",
+      "center": [
+        -23.5892725,
+        -46.6061621
+      ],
+      "km": 15.713887405996328,
+      "source": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&countrycodes=br&viewbox=-47.3,-23.3,-46.2,-24&bounded=1&q=Ipiranga%2C%20S%C3%A3o%20Paulo%2C%20Brasil",
+      "osmType": "relation",
+      "osmId": 3049352,
+      "displayName": "Ipiranga, São Paulo, Região Sudeste, Brasil",
+      "boundingbox": [
+        "-23.6120738",
+        "-23.5671060",
+        "-46.6207469",
+        "-46.5793341"
+      ]
+    },
+    {
+      "name": "Jabaquara",
+      "query": "Jabaquara, São Paulo, Brasil",
+      "center": [
+        -23.6487101,
+        -46.645451
+      ],
+      "km": 11.872306636195452,
+      "source": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&countrycodes=br&viewbox=-47.3,-23.3,-46.2,-24&bounded=1&q=Jabaquara%2C%20S%C3%A3o%20Paulo%2C%20Brasil",
+      "osmType": "relation",
+      "osmId": 1692134,
+      "displayName": "Jabaquara, São Paulo, Região Sudeste, Brasil",
+      "boundingbox": [
+        "-23.6751526",
+        "-23.6291874",
+        "-46.6720304",
+        "-46.6247029"
+      ]
+    },
+    {
+      "name": "Brás",
+      "query": "Brás, São Paulo, Brasil",
+      "center": [
+        -23.5429572,
+        -46.6172504
+      ],
+      "km": 16.5267054182698,
+      "source": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&countrycodes=br&viewbox=-47.3,-23.3,-46.2,-24&bounded=1&q=Br%C3%A1s%2C%20S%C3%A3o%20Paulo%2C%20Brasil",
+      "osmType": "relation",
+      "osmId": 2731074,
+      "displayName": "Brás, São Paulo, Região Sudeste, Brasil",
+      "boundingbox": [
+        "-23.5545830",
+        "-23.5329190",
+        "-46.6281970",
+        "-46.6044510"
+      ]
+    },
+    {
+      "name": "Bom Retiro",
+      "query": "Bom Retiro, São Paulo, Brasil",
+      "center": [
+        -23.5251634,
+        -46.6381644
+      ],
+      "km": 15.935471660715997,
+      "source": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&countrycodes=br&viewbox=-47.3,-23.3,-46.2,-24&bounded=1&q=Bom%20Retiro%2C%20S%C3%A3o%20Paulo%2C%20Brasil",
+      "osmType": "relation",
+      "osmId": 2731073,
+      "displayName": "Bom Retiro, São Paulo, Região Sudeste, Brasil",
+      "boundingbox": [
+        "-23.5376050",
+        "-23.5167554",
+        "-46.6541646",
+        "-46.6251500"
+      ]
+    },
+    {
+      "name": "Centro",
+      "query": "Sé, São Paulo, Brasil",
+      "center": [
+        -23.5488069,
+        -46.6317734
+      ],
+      "km": 14.921935324115221,
+      "source": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&countrycodes=br&viewbox=-47.3,-23.3,-46.2,-24&bounded=1&q=S%C3%A9%2C%20S%C3%A3o%20Paulo%2C%20Brasil",
+      "osmType": "relation",
+      "osmId": 2731081,
+      "displayName": "Sé, São Paulo, Região Sudeste, Brasil",
+      "boundingbox": [
+        "-23.5566020",
+        "-23.5358170",
+        "-46.6388620",
+        "-46.6248440"
+      ]
+    }
+  ],
+  "maxDistanceKm": 16.557787038547204,
+  "farthestLocation": "Cotia",
+  "radiusKm": 20,
+  "rounding": "Round maximum straight-line distance up to the next 5 km.",
+  "scope": "Representative locality points, not full municipal boundaries or road routes.",
+  "originSource": "Google Maps address embed from https://www.azultechengenharia.com.br/contato/"
+}

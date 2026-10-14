@@ -58,7 +58,7 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 py-3 bg-[#0c3561] transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 py-2 bg-[#0c3561] transition-all duration-300 ${
         scrolled ? "shadow-lg" : ""
       }`}
     >

@@ -103,7 +103,7 @@
   .article-body p { margin-block: 1rem; }
   .article-body h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; }
 }
-@layer base { html { scroll-padding-top: 88px; } :focus-visible { outline: 2px solid #f97316; outline-offset: 3px; } }
+@layer base { html { scroll-padding-top: 76px; } :focus-visible { outline: 2px solid #f97316; outline-offset: 3px; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
 @layer base { main { overflow-x: clip; } }
 @layer components {
@@ -168,4 +168,30 @@
 }
 @media(prefers-reduced-motion:reduce) {
   .scroll-reveal[data-reveal] { opacity: 1 !important; transform: none !important; }
+}
+
+@layer components {
+  .original-brand { height: 44px; align-items: flex-start; }
+  .team-photo-frame { padding-bottom: 10px; }
+  .gallery-slide { height: auto; aspect-ratio: 16 / 10; }
+  .commitment-values { display: grid; gap: 20px; }
+  .commitment-value { display: flex; gap: 18px; padding-bottom: 20px; border-bottom: 1px solid #dce4ed; }
+  .commitment-value:last-child { border-bottom: 0; padding-bottom: 0; }
+  .commitment-value > span { flex-shrink: 0; padding-top: 2px; font-size: 11px; font-weight: 700; color: #ea580c; }
+  .commitment-value h3 { color: #10233d; font-size: 16px; font-weight: 700; }
+  .commitment-value p { margin-top: 5px; color: #5b687a; font-size: 14px; line-height: 1.7; }
+  .commitment-photo { position: relative; min-height: 540px; height: 100%; overflow: hidden; border-radius: 22px; }
+  .commitment-photo > img { position: absolute; inset: 0; }
+  .commitment-photo figcaption { position: absolute; inset: auto 0 0; padding: 60px 28px 26px; background: linear-gradient(transparent,rgba(5,21,40,.92)); color: white; font-size: 18px; font-weight: 600; }
+  .commitment-photo figcaption span { display: block; margin-top: 8px; font-size: 10px; font-weight: 400; color: #cbd5e1; }
+  .coverage-map-shell { min-width: 0; overflow: hidden; border: 1px solid #dce4ed; border-radius: 20px; background: #edf2f6; }
+  .coverage-map { height: 440px; width: 100%; position: relative; z-index: 0; }
+  .coverage-map-footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; background: #fff; font-size: 11px; color: #526174; }
+  .coverage-map .leaflet-control-attribution { font-size: 9px; }
+  .coverage-map .leaflet-control-zoom { border: 1px solid #dbe3ec; border-radius: 8px; overflow: hidden; }
+}
+@media(max-width:639px) {
+  .gallery-slide { height: auto; aspect-ratio: 4 / 3; }
+  .commitment-photo { min-height: 340px; }
+  .coverage-map { height: 350px; }
 }

@@ -93,15 +93,15 @@ export default async function ServicePage({ params }: Props) {
       </section>
 
       {/* Main Content + Right Sidebar Layout */}
-      <section className="py-12 lg:py-16 bg-gray-50">
+      <section className="py-10 lg:py-14 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-3 gap-10 items-start">
+          <div className="grid lg:grid-cols-3 gap-6 lg:gap-8 items-start">
 
             {/* Left Column: Detailed Service Text & Information */}
-            <div className="lg:col-span-2 space-y-8">
+            <div className="lg:col-span-2 space-y-6">
               {/* Detailed Description */}
               <ScrollReveal direction="up">
-                <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                <div className="bg-white rounded-2xl p-5 sm:p-7 shadow-sm hover:shadow-md transition-shadow border border-gray-100">
                   <h2 className="font-head text-2xl font-black text-gray-900 mb-4 pb-3 border-b border-gray-100">
                     Descrição do Serviço
                   </h2>
@@ -117,11 +117,11 @@ export default async function ServicePage({ params }: Props) {
               {/* Advantages / Benefits */}
               {service.benefits.length > 0 && (
                 <ScrollReveal direction="up" delay={100}>
-                  <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow border border-gray-100">
-                    <h3 className="font-head text-xl font-bold text-gray-900 mb-6">
+                  <div className="bg-white rounded-2xl p-5 sm:p-7 shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                    <h3 className="font-head text-xl font-bold text-gray-900 mb-5">
                       Vantagens e Benefícios
                     </h3>
-                    <div className="grid sm:grid-cols-2 gap-4">
+                    <div className="grid sm:grid-cols-2 gap-3">
                       {service.benefits.map((benefit, i) => (
                         <div key={i} className="flex items-start gap-3 bg-gray-50 hover:bg-orange-50/50 p-4 rounded-xl border border-gray-100 transition-colors">
                           <span className="w-5 h-5 rounded-full bg-orange-500 text-white flex items-center justify-center flex-shrink-0 text-xs font-bold mt-0.5 shadow-xs"><Icon name="check" className="h-3 w-3" /></span>
@@ -136,7 +136,7 @@ export default async function ServicePage({ params }: Props) {
               {/* Technical Differentials */}
               {service.differentials && (
                 <ScrollReveal direction="up" delay={150}>
-                  <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                  <div className="bg-white rounded-2xl p-5 sm:p-7 shadow-sm hover:shadow-md transition-shadow border border-gray-100">
                     <h3 className="font-head text-xl font-bold text-gray-900 mb-3">
                       Diferencial Técnico Azultech
                     </h3>
@@ -150,7 +150,7 @@ export default async function ServicePage({ params }: Props) {
               {/* Related Services */}
               {service.relatedServices.length > 0 && (
                 <ScrollReveal direction="up" delay={250}>
-                  <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100">
+                  <div className="bg-white rounded-2xl p-5 sm:p-7 shadow-sm border border-gray-100">
                     <h3 className="font-head text-xl font-bold text-gray-900 mb-6">
                       Serviços Relacionados
                     </h3>
@@ -174,7 +174,7 @@ export default async function ServicePage({ params }: Props) {
             </div>
 
             {/* Right Column: Sticky Budget Form Sidebar */}
-            <div className="lg:col-span-1 lg:sticky lg:top-28">
+            <div className="lg:col-span-1 lg:sticky lg:top-20">
               <ScrollReveal direction="left" delay={100}>
                 <div className="bg-[#0c3561] rounded-2xl p-4 sm:p-6 shadow-xl text-white mb-6">
                   <h3 className="font-head text-2xl font-black mb-2">

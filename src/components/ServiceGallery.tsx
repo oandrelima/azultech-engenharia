@@ -21,7 +21,7 @@ export function ServiceGallery({ title, images }: { title: string; images: { src
   }
 
   return <section className="service-gallery" aria-label={"Fotos de " + title} aria-roledescription="carrossel">
-    <div className="flex items-center justify-between gap-4 p-5 sm:px-7">
+    <div className="flex items-center justify-between gap-4 px-5 py-4 sm:px-6">
       <div><p className="text-[10px] font-bold uppercase tracking-[.18em] text-orange-600">Inspiração para o seu projeto</p><h2 className="mt-1 text-lg font-bold text-slate-900">Veja os detalhes</h2></div>
       <div className="flex gap-2">
         <button type="button" aria-label="Foto anterior" aria-controls={id} onClick={() => goTo(active - 1)} className="gallery-arrow"><Icon name="chevron" className="h-5 w-5 rotate-90" /></button>
@@ -31,11 +31,11 @@ export function ServiceGallery({ title, images }: { title: string; images: { src
     <div ref={track} id={id} tabIndex={0} onKeyDown={onKey} className="gallery-track"
       onScroll={() => { if (track.current) setActive(Math.min(images.length - 1, Math.round(track.current.scrollLeft / track.current.clientWidth))); }}>
       {images.map((photo, index) => <figure key={photo.src} className="gallery-slide" role="group" aria-label={`Foto ${index + 1} de ${images.length}`}>
-        <Image src={photo.src} alt={`${title} — referência visual ${index + 1}`} fill sizes="(max-width: 1023px) 100vw, 65vw" className="object-contain" />
+        <Image src={photo.src} alt={`${title} — referência visual ${index + 1}`} fill sizes="(max-width: 1023px) 100vw, 65vw" className="object-cover" />
         <figcaption>{photo.illustrative ? "Imagem ilustrativa" : "Referência de aplicação"}</figcaption>
       </figure>)}
     </div>
-    <div className="flex items-center gap-3 p-5 sm:px-7">
+    <div className="flex items-center gap-3 px-5 py-4 sm:px-6">
       <div className="flex flex-1 gap-2">{images.map((photo, i) => <button type="button" key={photo.src} aria-label={`Ver foto ${i+1}`} aria-current={active === i ? "true" : undefined} onClick={() => goTo(i)} className={`gallery-thumb ${active === i ? "is-active" : ""}`}>
         <Image src={photo.src} alt="" fill sizes="80px" className="object-cover" />
       </button>)}</div>

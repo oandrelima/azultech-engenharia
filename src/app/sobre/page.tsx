@@ -1,151 +1,79 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import Image from "next/image";
 import { company } from "~/lib/company";
+import { coverage } from "~/lib/coverage";
+import { CoverageMap } from "~/components/CoverageMap";
 import { Icon } from "~/components/Icon";
+import { ScrollReveal } from "~/components/ScrollReveal";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Sobre a Azultech",
-  description:
-    "Conheça a história, missão e equipe da Azultech Engenharia, especialistas em reformas e estruturas metálicas na Zona Sul de São Paulo.",
+  description: "Conheça a equipe da Azultech Engenharia e nosso jeito de trabalhar com estruturas metálicas, vidros e reformas em São Paulo.",
 };
 
-const stats = [{ num: "Sob medida", label: "Projetos" }, { num: "18x", label: "Parcelamento" }, { num: "SP", label: "Atendimento" }];
-
-const areas = company.coverageNeighborhoods;
-
 export default function SobrePage() {
-  return (
-    <>
-      {/* Compact Hero */}
-      <section className="relative bg-[#0c3561] py-10 lg:py-12 overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-15 bg-cover bg-center"
-          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=1600&q=80')` }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#091f3a]/90 via-[#0c3561]/80 to-[#060f1e]/90" />
+  return <>
+    <section className="relative overflow-hidden bg-[#0c3561] py-12 lg:py-16">
+      <div className="container mx-auto px-4">
+        <nav className="mb-5 flex gap-2 text-xs text-blue-200"><Link href="/">Início</Link><span>/</span><span className="text-white">Sobre</span></nav>
+        <h1 className="font-head text-3xl font-black text-white sm:text-4xl lg:text-5xl">Sobre a <span className="text-orange-300">Azultech</span></h1>
+        <p className="mt-4 max-w-xl text-base leading-7 text-white/85">Gente que entende de transformar ideias em espaços para viver e trabalhar.</p>
+      </div>
+    </section>
 
-        <div className="container mx-auto px-4 relative z-10">
-          <nav className="text-xs text-blue-200 mb-3 flex items-center gap-2">
-            <Link href="/" className="hover:text-white transition-colors">Início</Link>
-            <span>/</span>
-            <span className="text-white font-medium">Sobre</span>
-          </nav>
-          <h1 className="font-head text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight mb-2">
-            Sobre a <span className="text-orange-400">Azultech</span>
-          </h1>
-          <p className="text-blue-100 text-base sm:text-lg max-w-2xl">
-            Engenharia civil com propósito: transformar espaços com segurança, qualidade e transparência.
-          </p>
-        </div>
-      </section>
+    <section className="py-16 lg:py-24">
+      <div className="container mx-auto grid items-center gap-10 px-4 lg:grid-cols-2 lg:gap-16">
+        <ScrollReveal direction="right"><Image src="/images/equipe-oficina.webp" alt="Equipe reunida na oficina industrial" width={1396} height={1127} sizes="(max-width: 1023px) 100vw, 50vw" className="h-auto w-full rounded-2xl" /></ScrollReveal>
+        <ScrollReveal direction="left">
+          <p className="mb-4 text-xs font-bold uppercase tracking-[.18em] text-orange-600">Quem faz acontecer</p>
+          <h2 className="font-head text-3xl font-black leading-tight text-slate-900 sm:text-4xl">Desde <span className="text-orange-500">2017</span> transformando espaços.</h2>
+          <div className="mt-6 space-y-4 text-base leading-8 text-slate-600">
+            <p>Por trás de cada estrutura, encaixe e acabamento, existe uma equipe que gosta de ver uma ideia ganhar forma. É esse cuidado com o trabalho que aproxima a Azultech de quem quer renovar ou aproveitar melhor um ambiente.</p>
+            <p>Nosso jeito de trabalhar começa pela conversa: entender como você usa o espaço, ouvir suas referências e pensar nas possibilidades junto com você. Da oficina à instalação, cada etapa faz parte do mesmo projeto.</p>
+            <p>Reunimos soluções em estruturas metálicas, vidros e reformas com atenção aos detalhes e respeito pelo seu imóvel. Queremos que você se sinta à vontade para perguntar, acompanhar e participar das decisões.</p>
+          </div>
+          <Link href="/contato" className="mt-7 inline-flex items-center gap-3 font-bold text-[#0c3561]">Converse com a nossa equipe <Icon name="arrow" /></Link>
+        </ScrollReveal>
+      </div>
+    </section>
 
-      {/* História */}
-      <section className="py-16 sm:py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="relative">
-              <Image
-                src="/images/equipe-oficina.webp"
-                alt="Equipe reunida na oficina industrial"
-                width={1396} height={1127}
-                className="w-full h-auto rounded-2xl shadow-xl"
-              />
-            </div>
-            <div>
-              <h2 className="font-head text-3xl sm:text-4xl font-black text-gray-900 mb-6">
-                Desde <span className="text-orange-500">2017</span> transformando espaços
-              </h2>
-              <div className="space-y-4 text-gray-600 leading-relaxed text-base">
-                <p>
-                  A Azultech Engenharia Ltda atua com estruturas metálicas, vidros e reformas para residências e empresas.
-                </p>
-                <p>
-                  Nossa sede fica na Avenida Anacé, 136, Jardim Umarizal, São Paulo – SP. CNPJ 28.366.602/0001-86. Realizamos fabricação, instalação e manutenção conforme a necessidade de cada imóvel.
-                </p>
-                <p>
-                  Nossa missão é unir eficiência técnica, inovação e compromisso com a satisfação do cliente em cada projeto.
-                </p>
-              </div>
-              <div className="grid grid-cols-3 gap-4 mt-8">
-                {stats.map((s) => (
-                  <div key={s.label} className="text-center bg-gray-50 rounded-xl p-4 border border-gray-100">
-                    <div className="font-head text-2xl sm:text-3xl font-black text-orange-500">{s.num}</div>
-                    <div className="text-xs text-gray-400 font-semibold uppercase tracking-wider mt-1">{s.label}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
+    <section className="commitment-section bg-[#f5f7fa] py-16 lg:py-24">
+      <div className="container mx-auto grid items-center gap-10 px-4 lg:grid-cols-2 lg:gap-16">
+        <ScrollReveal direction="right">
+          <p className="mb-4 text-xs font-bold uppercase tracking-[.18em] text-orange-600">Nosso jeito de trabalhar</p>
+          <h2 className="font-head text-3xl font-black leading-tight text-slate-900 sm:text-4xl">Nosso <span className="text-orange-500">compromisso</span> começa nos detalhes.</h2>
+          <p className="mb-7 mt-5 max-w-lg text-base leading-8 text-slate-600">Uma boa entrega é construída em cada escolha. Por isso, valorizamos uma conversa clara, o cuidado na execução e soluções que façam sentido para você.</p>
+          <div className="commitment-values">
+            {[
+              ["01","Conversa clara","Alinhamos o que será feito e esclarecemos suas dúvidas antes de começar."],
+              ["02","Cuidado em cada etapa","Dedicamos atenção às medidas, aos materiais e ao acabamento."],
+              ["03","Planejamento conjunto","Definimos o escopo e conversamos sobre as condições e os prazos do projeto."],
+              ["04","Respeito pelo seu espaço","Consideramos o uso do ambiente e a rotina de quem vive ou trabalha nele."],
+            ].map(([number,title,description]) => <div key={number} className="commitment-value"><span>{number}</span><div><h3>{title}</h3><p>{description}</p></div></div>)}
           </div>
-        </div>
-      </section>
+        </ScrollReveal>
+        <ScrollReveal direction="left">
+          <figure className="commitment-photo">
+            <Image src="/images/compromisso-oficina.webp" alt="Imagem ilustrativa do cuidado na medição de uma estrutura na oficina" width={1600} height={1000} sizes="(max-width: 1023px) 100vw, 50vw" className="h-full w-full object-cover" />
+            <figcaption>Precisão no trabalho. Cuidado com o resultado.<span>Imagem ilustrativa</span></figcaption>
+          </figure>
+        </ScrollReveal>
+      </div>
+    </section>
 
-      {/* Missão e Valores */}
-      <section className="py-16 sm:py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="font-head text-3xl sm:text-4xl font-black text-gray-900 mb-6">
-                Nosso <span className="text-orange-500">compromisso</span> com você
-              </h2>
-              <ul className="space-y-4">
-                {[
-                  ["Transparência", "Converse com a equipe sobre o escopo e as etapas do projeto."],
-                  ["Qualidade", "Materiais e acabamentos definidos para cada ambiente."],
-                  ["Agilidade", "Consulte a disponibilidade e os prazos para o seu projeto."],
-                  ["Segurança", "A solução deve considerar o uso do espaço e as condições do imóvel."],
-                ].map(([title, desc]) => (
-                  <li key={title} className="flex gap-3">
-                    <span className="w-5 h-5 rounded-full bg-orange-500 text-white flex items-center justify-center flex-shrink-0 text-xs font-bold mt-0.5"><Icon name="check" className="h-3 w-3" /></span>
-                    <div>
-                      <strong className="text-gray-900 text-base block">{title}</strong>
-                      <span className="text-gray-500 text-sm">{desc}</span>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <Image
-                src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=700&q=80"
-                alt="Imagem ilustrativa de reforma"
-                width={700} height={500}
-                className="w-full h-[380px] object-cover rounded-2xl shadow-xl"
-              />
-            </div>
-          </div>
+    <section className="py-16 lg:py-24" id="atendimento">
+      <div className="container mx-auto grid items-center gap-8 px-4 lg:grid-cols-[.8fr_1.4fr] lg:gap-14">
+        <div>
+          <p className="mb-4 text-xs font-bold uppercase tracking-[.18em] text-orange-600">Perto do seu projeto</p>
+          <h2 className="font-head text-3xl font-black leading-tight text-slate-900 sm:text-4xl">São Paulo e <span className="text-orange-500">região.</span></h2>
+          <p className="mt-5 text-base leading-8 text-slate-600">Partimos do Jardim Umarizal, na Zona Sul, para atender projetos residenciais e comerciais.</p>
+          <div className="my-6 flex items-baseline gap-2"><span className="text-4xl font-black text-[#0c3561]">{coverage.radiusKm} km</span><span className="text-sm text-slate-500">de raio de referência</span></div>
+          <p className="text-sm leading-7 text-slate-500">Raio calculado a partir dos pontos de referência das {coverage.locationsCount} localidades atendidas, em linha reta. Consulte a disponibilidade para o seu endereço.</p>
+          <a href={`https://wa.me/${company.whatsapp}?text=${encodeURIComponent("Olá! Gostaria de consultar o atendimento para o meu endereço.")}`} target="_blank" rel="noopener noreferrer" className="mt-7 inline-flex items-center gap-3 rounded-xl bg-orange-500 px-6 py-4 text-sm font-bold text-white hover:bg-orange-600">Consultar meu endereço <Icon name="arrow" className="h-4 w-4" /></a>
         </div>
-      </section>
-
-      {/* Área de Atuação */}
-      <section className="py-16 sm:py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-10">
-            <h2 className="font-head text-3xl sm:text-4xl font-black text-gray-900 mb-3">
-              Regiões onde <span className="text-orange-500">atendemos</span>
-            </h2>
-            <p className="text-gray-500 text-base">Atendemos toda a Grande São Paulo, com foco na Zona Sul.</p>
-          </div>
-          <div className="flex flex-wrap gap-2.5 justify-center max-w-4xl mx-auto">
-            {areas.map((area) => (
-              <span
-                key={area}
-                className="bg-white border border-gray-200 hover:border-orange-400 hover:text-orange-600 text-[#0c3561] font-semibold px-3.5 py-1.5 rounded-lg text-sm transition-colors"
-              >
-                {area}
-              </span>
-            ))}
-          </div>
-          <div className="text-center mt-10">
-            <Link
-              href="/contato"
-              className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-3.5 rounded-lg transition-colors text-base"
-            >
-              Solicitar Orçamento
-            </Link>
-          </div>
-        </div>
-      </section>
-    </>
-  );
+        <CoverageMap />
+      </div>
+    </section>
+  </>;
 }

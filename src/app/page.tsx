@@ -26,7 +26,7 @@ export default function HomePage() {
   return (
     <>
       {/* ===== HERO ===== */}
-      <section className="relative w-full min-h-[calc(100svh-92px)] flex items-end overflow-hidden">
+      <section className="relative w-full min-h-[calc(100svh-60px)] flex items-end overflow-hidden">
         {/* Full-bleed background image */}
         <div className="absolute inset-0">
           <Image
@@ -119,9 +119,6 @@ export default function HomePage() {
             <ScrollReveal direction="right">
               <figure className="team-photo-frame">
                 <Image src="/images/equipe-oficina.webp" alt="Equipe reunida na oficina industrial" width={1396} height={1127} sizes="(max-width: 1023px) 100vw, 50vw" className="w-full h-auto rounded-xl" />
-                <figcaption className="flex items-center justify-between gap-4 px-3 pb-2 pt-5 text-xs text-white/85">
-                  <span>Pessoas por trás de cada projeto.</span><span className="font-semibold text-orange-300">São Paulo</span>
-                </figcaption>
               </figure>
             </ScrollReveal>
             <ScrollReveal direction="left" delay={100}>
