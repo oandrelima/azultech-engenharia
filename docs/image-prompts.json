@@ -1,0 +1,86 @@
+[
+  {
+    "slug": "mezaninos-metalicos",
+    "file": "public/images/services/mezaninos-metalicos.webp",
+    "mode": "built-in imagegen",
+    "prompt": "Use case: photorealistic-natural. Asset type: engineering company service page hero, landscape 16:9. Industrial steel mezzanine inside a small organized warehouse, charcoal steel columns and beams, steel stairs and secure railing, full mezzanine in view. Style: premium editorial architectural photography, restrained neutral stone and charcoal palette, natural daylight, realistic Brazilian architecture, straight verticals, crisp material detail. Composition: wide horizontal, subject clearly readable on right two thirds, calm uncluttered left edge. No people, no text, no logo, no watermark, no collage. Illustrative concept, not documentation of an actual completed project."
+  },
+  {
+    "slug": "mezaninos-residenciais",
+    "file": "public/images/services/mezaninos-residenciais.webp",
+    "mode": "built-in imagegen",
+    "prompt": "Use case: photorealistic-natural. Asset type: engineering company service page hero, landscape 16:9. Residential double-height living room with a charcoal steel mezzanine, wood floor, slim steel staircase and secure railing, warm daylight. Style: premium editorial architectural photography, restrained neutral stone and charcoal palette, natural daylight, realistic Brazilian architecture, straight verticals, crisp material detail. Composition: wide horizontal, subject clearly readable on right two thirds, calm uncluttered left edge. No people, no text, no logo, no watermark, no collage. Illustrative concept, not documentation of an actual completed project."
+  },
+  {
+    "slug": "mezaninos-para-apartamentos",
+    "file": "public/images/services/mezaninos-para-apartamentos.webp",
+    "mode": "built-in imagegen",
+    "prompt": "Use case: photorealistic-natural. Asset type: engineering company service page hero, landscape 16:9. Compact double-height city apartment with a small steel mezzanine used as home office, safe railing and space-efficient staircase. Style: premium editorial architectural photography, restrained neutral stone and charcoal palette, natural daylight, realistic Brazilian architecture, straight verticals, crisp material detail. Composition: wide horizontal, subject clearly readable on right two thirds, calm uncluttered left edge. No people, no text, no logo, no watermark, no collage. Illustrative concept, not documentation of an actual completed project."
+  },
+  {
+    "slug": "cobertura-metalica",
+    "file": "public/images/services/cobertura-metalica.webp",
+    "mode": "built-in imagegen",
+    "prompt": "Use case: photorealistic-natural. Asset type: engineering company service page hero, landscape 16:9. Modern Brazilian house patio with a clean insulated metal roof supported by charcoal steel columns, visible roof construction from below. Style: premium editorial architectural photography, restrained neutral stone and charcoal palette, natural daylight, realistic Brazilian architecture, straight verticals, crisp material detail. Composition: wide horizontal, subject clearly readable on right two thirds, calm uncluttered left edge. No people, no text, no logo, no watermark, no collage. Illustrative concept, not documentation of an actual completed project."
+  },
+  {
+    "slug": "cobertura-de-vidro",
+    "file": "public/images/services/cobertura-de-vidro.webp",
+    "mode": "built-in imagegen",
+    "prompt": "Use case: photorealistic-natural. Asset type: engineering company service page hero, landscape 16:9. Contemporary house courtyard covered by laminated clear glass roof supported on dark steel beams, daylight and soft glass reflections. Style: premium editorial architectural photography, restrained neutral stone and charcoal palette, natural daylight, realistic Brazilian architecture, straight verticals, crisp material detail. Composition: wide horizontal, subject clearly readable on right two thirds, calm uncluttered left edge. No people, no text, no logo, no watermark, no collage. Illustrative concept, not documentation of an actual completed project."
+  },
+  {
+    "slug": "janelas-de-vidro-blindex",
+    "file": "public/images/services/janelas-de-vidro-blindex.webp",
+    "mode": "built-in imagegen",
+    "prompt": "Use case: photorealistic-natural. Asset type: engineering company service page hero, landscape 16:9. Large clear glass sliding windows with slim dark aluminum frames in a bright Brazilian home, close architectural framing. Style: premium editorial architectural photography, restrained neutral stone and charcoal palette, natural daylight, realistic Brazilian architecture, straight verticals, crisp material detail. Composition: wide horizontal, subject clearly readable on right two thirds, calm uncluttered left edge. No people, no text, no logo, no watermark, no collage. Illustrative concept, not documentation of an actual completed project."
+  },
+  {
+    "slug": "portas-de-vidro-blindex",
+    "file": "public/images/services/portas-de-vidro-blindex.webp",
+    "mode": "built-in imagegen",
+    "prompt": "Use case: photorealistic-natural. Asset type: engineering company service page hero, landscape 16:9. Elegant clear glass entrance door with stainless steel handle and hinges in a contemporary small commercial reception. Style: premium editorial architectural photography, restrained neutral stone and charcoal palette, natural daylight, realistic Brazilian architecture, straight verticals, crisp material detail. Composition: wide horizontal, subject clearly readable on right two thirds, calm uncluttered left edge. No people, no text, no logo, no watermark, no collage. Illustrative concept, not documentation of an actual completed project."
+  },
+  {
+    "slug": "automatizacao-de-portoes",
+    "file": "public/images/services/automatizacao-de-portoes.webp",
+    "mode": "built-in imagegen",
+    "prompt": "Use case: photorealistic-natural. Asset type: engineering company service page hero, landscape 16:9. Modern Brazilian residential sliding metal gate with discreet automatic gate motor at its base and clean driveway, gate partially open. Style: premium editorial architectural photography, restrained neutral stone and charcoal palette, natural daylight, realistic Brazilian architecture, straight verticals, crisp material detail. Composition: wide horizontal, subject clearly readable on right two thirds, calm uncluttered left edge. No people, no text, no logo, no watermark, no collage. Illustrative concept, not documentation of an actual completed project."
+  },
+  {
+    "slug": "reforma-de-portoes-de-aluminio",
+    "file": "public/images/services/reforma-de-portoes-de-aluminio.webp",
+    "mode": "built-in imagegen",
+    "prompt": "Use case: photorealistic-natural. Asset type: engineering company service page hero, landscape 16:9. Restored aluminum slatted residential gate, aligned panels and neat brushed silver finish, exterior close architectural shot. Style: premium editorial architectural photography, restrained neutral stone and charcoal palette, natural daylight, realistic Brazilian architecture, straight verticals, crisp material detail. Composition: wide horizontal, subject clearly readable on right two thirds, calm uncluttered left edge. No people, no text, no logo, no watermark, no collage. Illustrative concept, not documentation of an actual completed project."
+  },
+  {
+    "slug": "box-para-banheiro",
+    "file": "public/images/services/box-para-banheiro.webp",
+    "mode": "built-in imagegen",
+    "prompt": "Use case: photorealistic-natural. Asset type: engineering company service page hero, landscape 16:9. Minimal bathroom with glass shower enclosure, visible door hinges and handle, light stone tiles and brushed steel shower. Style: premium editorial architectural photography, restrained neutral stone and charcoal palette, natural daylight, realistic Brazilian architecture, straight verticals, crisp material detail. Composition: wide horizontal, subject clearly readable on right two thirds, calm uncluttered left edge. No people, no text, no logo, no watermark, no collage. Illustrative concept, not documentation of an actual completed project."
+  },
+  {
+    "slug": "fechamento-de-sacadas",
+    "file": "public/images/services/fechamento-de-sacadas.webp",
+    "mode": "built-in imagegen",
+    "prompt": "Use case: photorealistic-natural. Asset type: engineering company service page hero, landscape 16:9. Brazilian apartment balcony with retractable floor to ceiling glass panels, subtle tracks and city view, panels partially stacked at one side. Style: premium editorial architectural photography, restrained neutral stone and charcoal palette, natural daylight, realistic Brazilian architecture, straight verticals, crisp material detail. Composition: wide horizontal, subject clearly readable on right two thirds, calm uncluttered left edge. No people, no text, no logo, no watermark, no collage. Illustrative concept, not documentation of an actual completed project."
+  },
+  {
+    "slug": "servico-de-eletrica",
+    "file": "public/images/services/servico-de-eletrica.webp",
+    "mode": "built-in imagegen",
+    "prompt": "Use case: photorealistic-natural. Asset type: engineering company service page hero, landscape 16:9. Neat modern residential electrical distribution panel with closed touch-safe circuit breaker covers, organized finished installation on a light wall, no exposed live wires. Style: premium editorial architectural photography, restrained neutral stone and charcoal palette, natural daylight, realistic Brazilian architecture, straight verticals, crisp material detail. Composition: wide horizontal, subject clearly readable on right two thirds, calm uncluttered left edge. No people, no text, no logo, no watermark, no collage. Illustrative concept, not documentation of an actual completed project."
+  },
+  {
+    "slug": "servicos-de-hidraulica",
+    "file": "public/images/services/servicos-de-hidraulica.webp",
+    "mode": "built-in imagegen",
+    "prompt": "Use case: photorealistic-natural. Asset type: engineering company service page hero, landscape 16:9. Professionally installed neat plumbing manifold and water supply pipes in an accessible residential service cabinet, realistic fittings and shutoff valves. Style: premium editorial architectural photography, restrained neutral stone and charcoal palette, natural daylight, realistic Brazilian architecture, straight verticals, crisp material detail. Composition: wide horizontal, subject clearly readable on right two thirds, calm uncluttered left edge. No people, no text, no logo, no watermark, no collage. Illustrative concept, not documentation of an actual completed project."
+  },
+  {
+    "slug": "forro-de-gesso-e-acabamentos",
+    "file": "public/images/services/forro-de-gesso-e-acabamentos.webp",
+    "mode": "built-in imagegen",
+    "prompt": "Use case: photorealistic-natural. Asset type: engineering company service page hero, landscape 16:9. Contemporary empty living room with impeccably finished white drywall ceiling, recessed linear lighting and concealed curtain recess, soft daylight. Style: premium editorial architectural photography, restrained neutral stone and charcoal palette, natural daylight, realistic Brazilian architecture, straight verticals, crisp material detail. Composition: wide horizontal, subject clearly readable on right two thirds, calm uncluttered left edge. No people, no text, no logo, no watermark, no collage. Illustrative concept, not documentation of an actual completed project."
+  }
+]

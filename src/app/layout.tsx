@@ -4,6 +4,7 @@ import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import { TRPCReactProvider } from "~/trpc/react";
 import { Navbar } from "~/components/Navbar";
 import { Footer } from "~/components/Footer";
+import { organizationSchema } from "~/lib/company";
 import { WhatsAppFloat } from "~/components/WhatsAppFloat";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -20,6 +21,7 @@ export const metadata: Metadata = {
   },
   description:
     "Mezaninos metálicos, coberturas de vidro, esquadrias Blindex, automatização de portões e reformas residenciais e comerciais na Zona Sul de São Paulo. Parcelamento em até 18x.",
+  icons: { icon: "/favicon.svg", apple: "/favicon.svg" },
   keywords: [
     "mezanino metálico São Paulo",
     "cobertura de vidro Zona Sul SP",
@@ -45,8 +47,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="pt-BR" className={`${inter.variable} ${jakarta.variable}`}>
       <body className="font-sans">
         <TRPCReactProvider>
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema).replace(/</g, "\u003c") }} />
           <Navbar />
-          <main className="pt-[72px]">{children}</main>
+          <main className="pt-[80px]">{children}</main>
           <Footer />
           <WhatsAppFloat />
         </TRPCReactProvider>

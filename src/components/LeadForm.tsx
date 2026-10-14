@@ -1,21 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import { serviceCatalog } from "~/lib/services";
+import { Icon } from "~/components/Icon";
+import { useState, useId } from "react";
 import { api } from "~/trpc/react";
 
-const SERVICE_TYPES = [
-  "Mezanino Metálico", "Mezanino Residencial", "Mezanino para Apartamento",
-  "Cobertura Metálica", "Cobertura de Vidro", "Janelas Blindex",
-  "Portas de Vidro Blindex", "Automatização de Portão", "Reforma de Portão",
-  "Box para Banheiro", "Fechamento de Sacadas", "Elétrica", "Hidráulica",
-  "Forro de Gesso", "Outro",
-];
+const SERVICE_TYPES = [...serviceCatalog.map(s => s.title), "Outro"];
 
 interface LeadFormProps {
   defaultService?: string;
 }
 
 export function LeadForm({ defaultService }: LeadFormProps) {
+  const formId = useId();
   const [form, setForm] = useState({
     name: "", phone: "", email: "", neighborhood: "",
     serviceType: defaultService ?? "", projectType: "Residencial", message: "",
@@ -36,12 +33,12 @@ export function LeadForm({ defaultService }: LeadFormProps) {
 
   if (success) {
     return (
-      <div className="bg-white rounded-2xl p-8 text-center shadow-xl text-gray-800">
+      <div className="bg-white rounded-lg p-8 text-center border border-slate-200 text-gray-800">
         <div className="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-2xl">
-          ✓
+          <Icon name="check" />
         </div>
         <h3 className="text-2xl font-bold text-[#0c3561] mb-2">Recebemos sua solicitação!</h3>
-        <p className="text-gray-600 mb-6 text-sm">Nossa equipe entrará em contato em até 24 horas. Ou se preferir, fale agora pelo WhatsApp.</p>
+        <p className="text-gray-600 mb-6 text-sm">Nossa equipe entrará em contato para conversar sobre o projeto. Ou se preferir, fale agora pelo WhatsApp.</p>
         <a
           href="https://wa.me/5511939217592"
           target="_blank"
@@ -58,39 +55,39 @@ export function LeadForm({ defaultService }: LeadFormProps) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-6 sm:p-8 shadow-xl space-y-4 text-gray-800">
+    <form onSubmit={handleSubmit} className="bg-white rounded-lg p-6 sm:p-8 border border-slate-200 space-y-4 text-gray-800">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label className="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1">
+          <label htmlFor={formId + "-name"} className="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1">
             Nome completo <span className="text-orange-500">*</span>
           </label>
-          <input
+          <input id={formId + "-name"} name="name"
             type="text" required placeholder="Seu nome"
             value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })}
             className="w-full px-3.5 py-2.5 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0c3561] focus:border-transparent outline-none transition-all"
           />
         </div>
         <div>
-          <label className="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1">
+          <label htmlFor={formId + "-phone"} className="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1">
             Telefone / WhatsApp <span className="text-orange-500">*</span>
           </label>
-          <input
+          <input id={formId + "-phone"} name="phone"
             type="tel" required placeholder="(11) 99999-9999"
             value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })}
             className="w-full px-3.5 py-2.5 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0c3561] focus:border-transparent outline-none transition-all"
           />
         </div>
         <div>
-          <label className="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1">E-mail</label>
-          <input
+          <label htmlFor={formId + "-email"} className="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1">E-mail</label>
+          <input id={formId + "-email"} name="email"
             type="email" placeholder="seu@email.com"
             value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })}
             className="w-full px-3.5 py-2.5 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0c3561] focus:border-transparent outline-none transition-all"
           />
         </div>
         <div>
-          <label className="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1">Bairro</label>
-          <input
+          <label htmlFor={formId + "-neighborhood"} className="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1">Bairro</label>
+          <input id={formId + "-neighborhood"} name="neighborhood"
             type="text" placeholder="Ex: Morumbi, Campo Limpo..."
             value={form.neighborhood} onChange={(e) => setForm({ ...form, neighborhood: e.target.value })}
             className="w-full px-3.5 py-2.5 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0c3561] focus:border-transparent outline-none transition-all"
@@ -100,10 +97,10 @@ export function LeadForm({ defaultService }: LeadFormProps) {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label className="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1">
+          <label htmlFor={formId + "-serviceType"} className="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1">
             Serviço desejado <span className="text-orange-500">*</span>
           </label>
-          <select
+          <select id={formId + "-serviceType"} name="serviceType"
             required value={form.serviceType} onChange={(e) => setForm({ ...form, serviceType: e.target.value })}
             className="w-full px-3.5 py-2.5 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0c3561] focus:border-transparent outline-none transition-all bg-white"
           >
@@ -112,8 +109,8 @@ export function LeadForm({ defaultService }: LeadFormProps) {
           </select>
         </div>
         <div>
-          <label className="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1">Tipo de imóvel</label>
-          <select
+          <label htmlFor={formId + "-projectType"} className="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1">Tipo de imóvel</label>
+          <select id={formId + "-projectType"} name="projectType"
             value={form.projectType} onChange={(e) => setForm({ ...form, projectType: e.target.value })}
             className="w-full px-3.5 py-2.5 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0c3561] focus:border-transparent outline-none transition-all bg-white"
           >
@@ -125,10 +122,10 @@ export function LeadForm({ defaultService }: LeadFormProps) {
       </div>
 
       <div>
-        <label className="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1">
+        <label htmlFor={formId + "-message"} className="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1">
           Descrição do projeto <span className="text-orange-500">*</span>
         </label>
-        <textarea
+        <textarea id={formId + "-message"} name="message"
           required rows={3} placeholder="Descreva o que você precisa..."
           value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })}
           className="w-full px-3.5 py-2.5 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0c3561] focus:border-transparent outline-none transition-all resize-none"
